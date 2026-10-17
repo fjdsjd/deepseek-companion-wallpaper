@@ -1,0 +1,6 @@
+node_modules/
+dist/
+test-results/
+coverage/
+.venv/
+public/assets/fonts/*-OFL.txt

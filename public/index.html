@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
+    />
+    <meta name="color-scheme" content="dark" /><title>Deepseek 图鲸鲸 · 大肥鱼数字生命控制台</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ctext y='30' font-size='30'%3E✦%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <script>
+      window.__wallpaperQueue = [];
+      window.wallpaperPropertyListener = {
+        applyUserProperties: (properties) => window.__wallpaperQueue.push(['user', properties]),
+        applyGeneralProperties: (properties) => window.__wallpaperQueue.push(['general', properties]),
+        setPaused: (paused) => window.__wallpaperQueue.push(['paused', paused]),
+      };
+    </script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main id="room" data-state="idle" data-side="left">
+      <div id="background" aria-hidden="true"></div><div class="vignette" aria-hidden="true"></div>
+      <canvas id="dust" aria-hidden="true"></canvas>
+      <div id="layoutStage">
+        <div id="character" role="img" aria-label="Deepseek，拖动头顶可以摸头，拖动脸颊可以捏脸">
+          <canvas id="avatar"></canvas
+          ><img id="fallback" src="assets/character/idle.png" alt="Deepseek" hidden />
+          <svg id="musicEffects" viewBox="0 0 1000 1000" aria-hidden="true" hidden></svg>
+          <svg id="mealEffects" viewBox="0 0 1000 1000" aria-hidden="true" hidden></svg>
+        </div>
+        <div id="hugGlow" aria-hidden="true"></div>
+        <header class="topbar hud">
+          <div class="brand"
+            ><svg viewBox="0 0 42 54" fill="none" aria-hidden="true">
+              <path
+                d="M5 3v48M11 3h25v48M14 8h15v35L14 49V8Z"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path d="M5 51h6M32 3h8" stroke="currentColor" /></svg
+            ><div
+              ><strong>DEEPSEEK</strong><span>DIGITAL LIFE SIMULATOR</span
+              ><small>数字生命模拟器</small></div
+            ></div
+          >
+          <div id="topResources" class="topdatum resource-top"
+            ><div class="datum-line"
+              ><span>550W MEMORY POOL</span><b id="topMemory" class="readout">—</b></div
+            ><div class="datum-line"
+              ><span>QUANTUM ARRAY / 8192</span><i class="barcode" aria-hidden="true"></i></div
+          ></div>
+          <div class="topdatum status-top"
+            ><span>SYSTEM LINK <i class="barcode short" aria-hidden="true"></i></span
+            ><b id="connectionStatus">LOCAL SESSION</b></div
+          >
+          <div class="topdatum alert-top"
+            ><span>ALERTS</span
+            ><b id="alertFlag" class="alert-mark" aria-label="状态正常">·</b></div
+          >
+          <div class="topdatum session-top"
+            ><span>SESSION ELAPSED</span
+            ><div class="datum-line"
+              ><b id="sessionTime">00:00:00</b><i class="barcode" aria-hidden="true"></i></div
+          ></div>
+          <button id="settingsButton" class="icon-button" aria-label="打开设置"
+            ><svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M4 6h16M4 12h16M4 18h16M9 3v6M15 9v6M8 15v6"
+                stroke="currentColor"
+                stroke-width="1.4"
+              /></svg
+          ></button>
+        </header>
+        <aside id="infoPanel" class="info-panel hud" aria-label="550W 节点与根服务器环境">
+          <section id="systemInfo"
+            ><h2>SYSTEM CORE / 550W</h2>
+            <dl
+              ><div><dt>COMPUTE LOAD</dt><dd id="cpuValue" class="readout">24.8%</dd></div></dl
+            ><div class="meter"><i id="cpuMeter"></i></div>
+            <dl
+              ><div><dt>MEMORY POOL</dt><dd id="memoryValue" class="readout">38.6%</dd></div></dl
+            ><div class="meter"><i id="memoryMeter"></i></div>
+            <p class="micro" id="memoryDetail">49.4 / 128.0 TB · Q-MEM</p>
+            <dl class="small-data"
+              ><div><dt>CPU</dt><dd id="cpuName">i1000-550W</dd></div
+              ><div><dt>GPU</dt><dd id="gpuName">RTX 50900 Ti</dd></div
+              ><div><dt>OS</dt><dd id="osName">MOSS OS 5.50</dd></div
+              ><div><dt>UPTIME</dt><dd id="uptime">550 D 00 H 00 M</dd></div></dl
+            >
+          </section>
+          <section class="emotion-panel"
+            ><h2>EMOTION MAP</h2
+            ><div class="emotion-line"
+              ><strong id="emotionValue">安静陪伴</strong
+              ><span id="emotionCode" class="readout">IDLE</span></div
+            ><p id="emotionDescription" class="micro">呆毛还醒着，本人正在发呆。</p
+            ><div class="waveform" aria-hidden="true"></div
+          ></section>
+          <section id="weatherInfo"
+            ><h2>IPV6 ROOT / BEIJING</h2>
+            <dl class="environment-data"
+              ><div><dt>NODE</dt><dd>CN-BJ / ROOT-01</dd></div
+              ><div
+                ><dt aria-label="核心温度">CORE TEMP.</dt
+                ><dd class="weather-main"
+                  ><strong id="temperature">31.8<small>°C</small></strong></dd
+                ></div
+              ><div><dt aria-label="冷却液温度">COOLANT</dt><dd id="feelsLike">18.6°C</dd></div
+              ><div
+                ><dt aria-label="同步状态">SYNC STATUS</dt><dd id="rootSync">SYNCHRONIZED</dd></div
+              ></dl
+            >
+            <div class="root-location"
+              ><span>中国互联网中心</span><strong>北京基地 · 旧址</strong></div
+            >
+            <div class="micro root-credit"
+              ><span>IMMERSION COOLING</span><span id="rootLink">LINK STABLE</span></div
+            >
+          </section>
+        </aside>
+        <aside class="right-panel hud">
+          <section id="consolePanel" class="console-panel" aria-label="系统播放频谱与本地交互日志"
+            ><div class="console-title"
+              ><i></i><span id="consoleHeading">DEEPSEEK / RUNTIME</span
+              ><span class="barcode short" aria-hidden="true"></span
+            ></div>
+            <pre id="consoleOutput"></pre>
+            <div id="musicPanel" class="music-panel" hidden
+              ><div class="music-kicker"
+                ><span id="musicPlayback">♫ MEDIA SESSION</span
+                ><span class="music-channel">L + R</span></div
+              ><div class="music-track"
+                ><strong id="trackTitle">等待系统音乐</strong><span id="trackArtist"></span></div
+              ><canvas id="spectrum" aria-label="当前系统音频的频域频谱"></canvas
+              ><div class="spectrum-axis" aria-hidden="true"
+                ><span>LOW</span><span>MID</span><span>HIGH</span></div
+              ><div class="music-signal"
+                ><span id="spectrumState">等待音频信号</span><span id="musicTimeline"></span></div
+            ></div>
+            <div class="console-foot"
+              ><span id="consoleMode">LOCAL EVENT STREAM</span
+              ><span id="streamState">CONNECTED</span></div
+            >
+          </section>
+          <section class="recognition-panel"
+            ><h2>RECOGNITION</h2
+            ><dl
+              ><div><dt>SUBJECT</dt><dd class="readout">DEEPSEEK</dd></div
+              ><div><dt>SCENE</dt><dd>INTERIOR</dd></div
+              ><div><dt>TRACKING</dt><dd id="trackingStatus" class="readout">ACTIVE</dd></div
+              ><div><dt>STATE</dt><dd id="recognitionState">IDLE</dd></div></dl
+            ></section
+          >
+          <section class="interaction-panel"
+            ><h2>BEHAVIOR PARAMETERS</h2>
+            <button id="studyButton" class="line-button"
+              ><span class="button-symbol">▸</span><span id="studyLabel">让她学习</span
+              ><span class="control-code">STUDY</span></button
+            >
+            <div id="studyProgress" hidden
+              ><span id="studyTimer">00:00 / 10:00</span
+              ><div class="meter"><i id="studyMeter"></i></div
+            ></div>
+            <button id="feedButton" class="line-button feed-button" disabled
+              ><svg class="rice-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path
+                  d="M3 11h18c-.8 6-4 8-9 8s-8.2-2-9-8ZM8 21h8M5 11c0-2 2-3 3-2 0-3 3-4 4-2 2-2 4-1 4 1 2-1 4 1 3 3"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                  stroke-linejoin="round"
+                /></svg
+              ><span id="feedLabel">喂她大白饭</span><span class="control-code">RICE</span></button
+            >
+            <p id="feedStatus" class="meal-status" role="status" aria-live="polite" hidden></p>
+            <button id="panelSettingsButton" class="text-button"
+              >系统配置 <span>SYSTEM CONFIG. +</span></button
+            >
+          </section>
+        </aside>
+        <div class="character-caption" id="caption" aria-hidden="true"
+          ><span id="captionText">探头——我在这儿呢 (｡･ω･｡)ﾉ</span
+          ><small>DEEPSEEK · DIGITAL LIFE</small></div
+        >
+        <div id="chatterBubble" class="chatter-bubble" hidden>
+          <svg class="chatter-tail" aria-hidden="true"><path id="chatterTail"></path></svg>
+          <div class="chatter-heading"
+            ><span aria-hidden="true">♡</span><small>小声说</small><span id="chatterContext"></span
+            ><span id="chatterSequence" aria-hidden="true"></span
+          ></div>
+          <button
+            id="closeChatter"
+            class="chatter-close"
+            type="button"
+            aria-label="关闭这轮聊天气泡"
+            ><span aria-hidden="true">×</span></button
+          >
+          <p id="chatterText" role="status" aria-live="polite" aria-atomic="true"></p>
+        </div>
+        <button id="hugButton" class="hug-bubble" hidden
+          ><span>手伸好啦 (つ´ω`)つ</span><strong>♡ 抱抱她</strong></button
+        >
+        <footer id="clockPanel" class="bottom hud"
+          ><div class="clock-row"
+            ><div class="run-indicator" aria-label="模拟器运行状态"
+              ><span id="runState">RUN</span><i aria-hidden="true"></i></div
+            ><div class="system-calendar"
+              ><span class="clock-label">SYSTEM TIME / 系统时间</span
+              ><div id="date">2026 / 10 / 14</div></div
+            ><time id="clock">00<span>:</span>00<span>:</span>00</time
+            ><div class="day-info"
+              ><span>DAY ELAPSED RATIO</span
+              ><strong id="dayPercent" class="readout">0.00<small>%</small></strong></div
+            ><div class="capacity-mark"
+              ><span>DAILY TIME CAPACITY</span><i class="barcode" aria-hidden="true"></i></div></div
+          ><div class="day-track"><div id="dayFill"></div><i id="dayMarker"></i></div
+          ><div class="track-labels"
+            ><span>00:00</span><span>06:00</span><span>12:00</span><span>18:00</span
+            ><span>24:00</span></div
+          ></footer
+        >
+      </div>
+      <div id="loading" role="status"
+        ><span class="loader"></span><strong>正在唤醒 Deepseek</strong
+        ><small>准备陪伴空间…</small></div
+      >
+      <div id="toast" role="status" hidden></div>
+    </main>
+    <div id="settingsOverlay" hidden>
+      <section id="settingsPanel" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+        <div class="settings-heading"
+          ><div><span>SIMULATION PARAMETERS</span><h1 id="settingsTitle">模拟器设置</h1></div
+          ><button id="closeSettings" class="icon-button" aria-label="关闭设置">×</button></div
+        >
+        <p class="settings-intro">DEEPSEEK / 数字生命模拟器 · 本机配置</p>
+        <div id="settingsScroll" class="settings-scroll"
+          ><div id="settingsContent">
+            <fieldset
+              ><legend>屏幕布局</legend
+              ><p id="layoutStatus" class="layout-status">自动适配屏幕比例</p
+              ><label class="setting-row"
+                >避让系统任务栏<input type="checkbox" data-setting="avoidTaskbar" /><i></i></label
+              ><p id="taskbarStatus" class="settings-note"
+                >默认开启，为底部 Windows 任务栏预留空间。</p
+              ></fieldset
+            >
+            <fieldset
+              ><legend>显示信息</legend
+              ><label class="setting-row"
+                >550W 节点信息<input type="checkbox" data-setting="showNodeInfo" /><i></i></label
+              ><label class="range-row"
+                >节点读数刷新间隔 <output data-value="systemInterval" data-unit=" 秒"></output
+                ><input
+                  type="range"
+                  min="2"
+                  max="60"
+                  step="1"
+                  data-setting="systemInterval"
+                  aria-describedby="systemIntervalHelp" /></label
+              ><p id="systemIntervalHelp" class="settings-note"
+                >2–60 秒，默认 5 秒；暂停壁纸时读数保持。</p
+              ><label class="setting-row"
+                >根服务器环境<input
+                  type="checkbox"
+                  data-setting="showRootEnvironment" /><i></i></label
+              ><label class="setting-row"
+                >流式控制台<input type="checkbox" data-setting="showConsole" /><i></i></label
+              ><label class="setting-row"
+                >系统时间与当天进度<input type="checkbox" data-setting="showClock" /><i></i></label
+              ><div class="setting-row setting-choice"
+                ><span id="infoSideLabel">信息位置</span
+                ><div class="choice-group" role="radiogroup" aria-labelledby="infoSideLabel"
+                  ><label
+                    ><input
+                      type="radio"
+                      name="infoSide"
+                      data-setting="infoSide"
+                      value="left"
+                    /><span>左侧</span></label
+                  ><label
+                    ><input
+                      type="radio"
+                      name="infoSide"
+                      data-setting="infoSide"
+                      value="right"
+                    /><span>右侧</span></label
+                  ></div
+                ></div
+              ></fieldset
+            >
+            <fieldset
+              ><legend>角色与互动</legend
+              ><label class="setting-row"
+                >身体与眼神跟随<input type="checkbox" data-setting="mouseTracking" /><i></i></label
+              ><label class="setting-row"
+                >摸摸头<input type="checkbox" data-setting="enablePet" /><i></i></label
+              ><label class="setting-row"
+                >拖拽捏脸<input type="checkbox" data-setting="enablePinch" /><i></i></label
+              ><label class="setting-row"
+                >进食漫画特效<input type="checkbox" data-setting="mealEffects" /><i></i></label
+              ><label class="range-row"
+                >角色大小 <output data-value="characterScale"></output
+                ><input type="range" min="75" max="120" data-setting="characterScale" /></label
+              ><label class="range-row"
+                >动作幅度 <output data-value="motion"></output
+                ><input type="range" min="0" max="100" data-setting="motion" /></label
+            ></fieldset>
+            <fieldset id="studySettings"
+              ><legend>陪她看书</legend
+              ><label class="range-row"
+                >每轮学习时长 <output data-value="studyMinutes" data-unit=" 分钟"></output
+                ><input
+                  type="range"
+                  min="1"
+                  max="120"
+                  step="1"
+                  data-setting="studyMinutes"
+                  aria-describedby="studyDurationHelp" /></label
+              ><p id="studyDurationHelp" class="settings-note"
+                >1–120 分钟，默认 10 分钟。修改后从下一轮开始使用，本轮继续原来的计时。</p
+              ><p class="settings-note"
+                >学够这一轮，小鲸鱼会抬头等你。摸摸头后开始新的一轮；再等 5
+                分钟没有摸头，就会想要抱抱。</p
+              ></fieldset
+            >
+            <fieldset id="dialogueSettings"
+              ><legend>小声碎碎念</legend
+              ><label class="setting-row"
+                >偶尔说几句话<input type="checkbox" data-setting="showChatter" /><i></i></label
+              ><label class="range-row"
+                >两轮闲聊的间隔 <output data-value="chatterInterval" data-unit=" 秒"></output
+                ><input
+                  type="range"
+                  min="15"
+                  max="180"
+                  step="1"
+                  data-setting="chatterInterval"
+                  aria-describedby="chatterHelp" /></label
+              ><p id="chatterHelp" class="settings-note"
+                >默认约 45
+                秒，前后略有变化。每次说一两句就收起；互动时会换成对应的话，暂停时也一起休息。关掉后仍会短暂显示状态字幕，约
+                3 秒后渐隐。</p
+              ></fieldset
+            >
+            <fieldset id="musicSettings"
+              ><legend>系统音乐</legend
+              ><label class="setting-row"
+                >播放名称与频谱<input type="checkbox" data-setting="showMusic" /><i></i></label
+              ><label class="setting-row"
+                >随节奏轻轻律动<input type="checkbox" data-setting="musicMotion" /><i></i></label
+              ><label class="setting-row"
+                >听歌漫画符号<input type="checkbox" data-setting="musicEffects" /><i></i></label
+              ><label class="range-row"
+                >节奏灵敏度 <output data-value="musicSensitivity"></output
+                ><input type="range" min="50" max="150" data-setting="musicSensitivity" /></label
+              ><p id="musicStatus" class="settings-note" role="status">正在连接系统播放信息…</p
+              ><p class="settings-note"
+                >名称来自系统媒体会话；频谱反映系统正在输出的声音。播放器未提供名称时会明确提示。摸头、捏脸、学习和吃饭期间优先保留互动动作，回到待机后继续听歌。</p
+              ></fieldset
+            >
+            <fieldset
+              ><legend>光影与性能</legend
+              ><label class="setting-row"
+                >漂浮微尘<input type="checkbox" data-setting="showParticles" /><i></i></label
+              ><label class="range-row"
+                >环境亮度 <output data-value="brightness"></output
+                ><input type="range" min="45" max="115" data-setting="brightness" /></label
+              ><label class="range-row"
+                >帧率上限 <output data-value="fps" data-unit=" FPS"></output
+                ><input type="range" min="15" max="60" step="1" data-setting="fps" /></label
+              ><p class="settings-note">15 FPS 省电 · 30 FPS 推荐 · 60 FPS 流畅</p></fieldset
+            >
+
+            <p class="settings-note">第 4 次有效捏脸会把小鲸鱼弄哭，摸头安抚后还需要一个抱抱。</p>
+            <p class="settings-note"
+              >点击“喂她大白饭”，她会双手托碗，等勺子送饭入口，再慢慢嚼嚼。吃饭时学习计时暂停，吃好后恢复；哭泣或想要抱抱时，先安抚她再吃饭。</p
+            >
+            <p class="settings-note"
+              >听歌时会换成闭眼微笑的专属立绘。停止或暂停后回到待机；关闭律动时仍可静静享受音乐。</p
+            >
+            <p id="dataStatus" class="settings-note"
+              >550W 节点在线 · 北京根服务器已同步。音乐响应由 Wallpaper Engine 提供。</p
+            >
+          </div></div
+        >
+        <nav class="settings-navigation" aria-label="设置内容翻页">
+          <button id="settingsPageUp" type="button" aria-controls="settingsScroll" disabled
+            ><span aria-hidden="true">↑</span> 向上翻页</button
+          >
+          <span id="settingsPosition" aria-hidden="true">顶部</span>
+          <button id="settingsPageDown" type="button" aria-controls="settingsScroll"
+            >向下翻页 <span aria-hidden="true">↓</span></button
+          >
+        </nav>
+        <div class="settings-footer"
+          ><button id="resetSettings" class="text-button">恢复默认设置</button
+          ><span>自动保存于本机</span></div
+        >
+      </section>
+    </div>
+    <script src="audio-host.js"></script> </body
+></html>

@@ -1,0 +1,478 @@
+/* Viewport profiles share the original simulator typography and palette.
+   The stage excludes the taskbar; the room background still fills the screen. */
+#layoutStage {
+  position: absolute;
+  inset: 0 0 var(--taskbar-inset, 0px);
+}
+.topbar {
+  top: var(--edge-y, 2%);
+  height: var(--header-height, 6.5vh);
+  min-height: 0;
+  gap: clamp(12px, 2vw, 32px);
+}
+.info-panel,
+.right-panel {
+  top: var(--panel-top, 11.3%);
+  bottom: auto;
+  width: var(--side-width);
+}
+.info-panel {
+  left: var(--panel-inset, var(--edge));
+  gap: clamp(12px, 2vh, 30px);
+}
+.right-panel {
+  right: var(--panel-inset, var(--edge));
+}
+#room[data-side='right'] .info-panel {
+  left: auto;
+  right: var(--panel-inset, var(--edge));
+}
+#room[data-side='right'] .right-panel {
+  right: auto;
+  left: var(--panel-inset, var(--edge));
+}
+#character {
+  top: var(--avatar-top, 10%);
+  bottom: auto;
+  width: var(--avatar-size, 88vh);
+  height: var(--avatar-size, 88vh);
+  max-width: none;
+  max-height: none;
+  transform: translateX(-50%);
+}
+#avatar,
+#fallback,
+#expressionFallback {
+  mask-image: linear-gradient(to bottom, #000 94%, transparent 100%);
+}
+.bottom {
+  bottom: var(--edge-y, 2%);
+}
+.clock-row {
+  display: grid;
+  grid-template-columns: auto auto auto 1fr auto;
+  gap: clamp(12px, 1.2vw, 30px);
+  min-height: 0;
+}
+.clock-row > * {
+  order: 0;
+  min-width: 0;
+}
+.day-info {
+  justify-self: end;
+  margin-left: 0;
+}
+.capacity-mark {
+  margin-left: 0;
+}
+#clock {
+  font-size: var(--clock-size, 70px);
+  letter-spacing: 0;
+  text-align: left;
+  flex: none;
+}
+#date {
+  font-size: var(--date-size, 36px);
+  letter-spacing: -1px;
+  margin-top: 6px;
+}
+.day-track {
+  height: clamp(23px, 2.8vh, 44px);
+}
+.character-caption,
+#room[data-state='feeding'] .character-caption {
+  left: 50%;
+  bottom: var(--speech-bottom, 20%);
+  transform: translateX(-50%);
+  width: var(--speech-width, 430px);
+  max-width: calc(100% - 32px);
+  white-space: normal;
+  text-align: center;
+  align-items: center;
+  font-size: clamp(15px, 1.3vw, 26px);
+}
+.chatter-bubble,
+#room[data-state='feeding'] .chatter-bubble {
+  left: var(--chatter-left, 62%);
+  top: var(--chatter-top, 13%);
+  bottom: auto;
+  transform: none;
+  width: var(--chatter-width, 360px);
+  min-width: 0;
+  max-width: none;
+  padding: 15px 20px 17px;
+}
+#room[data-state='feeding'] #chatterText {
+  font-size: clamp(16px, 1.25vw, 22px);
+}
+.hug-bubble {
+  left: var(--hug-left, 65%);
+  top: var(--hug-top, 52%);
+  right: auto;
+  max-width: calc(100% - 28px);
+}
+#settingsPanel {
+  bottom: var(--taskbar-inset, 0px);
+  padding-bottom: 20px;
+}
+.layout-status {
+  margin: 0 0 10px;
+  color: #d5e0e8;
+  font: 14px var(--mono);
+  letter-spacing: 0.4px;
+}
+#taskbarStatus {
+  margin: 3px 0 12px;
+}
+.root-location {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font: 11px/1.4 var(--body);
+  color: var(--muted);
+}
+.root-location strong {
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: 1px;
+}
+.root-credit {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  font: 11px/1.3 var(--mono);
+  letter-spacing: 0.35px;
+  margin: 10px 0 0;
+}
+#rootSync {
+  font-size: calc(var(--hud-size) * 0.84);
+}
+
+/* Low-height laptops, 4:3 / 5:4 displays, and the information band in portrait. */
+:root[data-density='compact'] .info-panel {
+  gap: 12px;
+}
+:root[data-density='compact'] section h2 {
+  margin-bottom: 7px;
+}
+:root[data-density='compact'] dl > div {
+  margin: 5px 0;
+}
+:root[data-density='compact'] .small-data {
+  margin-top: 8px;
+}
+:root[data-density='compact'] .small-data > div {
+  margin: 5px 0;
+}
+:root[data-density='compact'] #memoryDetail {
+  margin: 5px 0;
+}
+:root[data-density='compact'] .emotion-panel .waveform {
+  display: none;
+}
+:root[data-density='compact'] .recognition-panel {
+  margin-bottom: 12px;
+}
+:root[data-density='compact'] .recognition-panel dl {
+  margin-left: 0;
+}
+:root[data-density='compact'] .recognition-panel h2 {
+  margin-bottom: 5px;
+}
+:root[data-density='compact'] .console-panel {
+  margin-bottom: 12px;
+}
+:root[data-density='compact'] #consoleOutput {
+  height: 72px;
+}
+:root[data-density='compact'] .music-panel {
+  height: 118px;
+  padding: 6px 9px;
+  gap: 2px;
+}
+:root[data-density='compact'] .music-track strong {
+  font-size: 11px;
+  -webkit-line-clamp: 1;
+}
+:root[data-density='compact'] .line-button {
+  padding: 7px 9px;
+  font-size: 11px;
+}
+:root[data-density='compact'] .feed-button {
+  margin-top: 6px;
+}
+:root[data-density='compact'] .weather-place {
+  margin-top: 8px;
+}
+:root[data-density='compact'] .weather-credit {
+  margin-top: 6px;
+}
+:root[data-density='compact'] .meal-status {
+  margin: 5px 0;
+}
+
+/* Ultrawide portraits retain their height. Side panels form a readable central
+   composition while the time rail and fine rules span the whole monitor. */
+#room[data-layout='ultrawide'] .info-panel,
+#room[data-layout='superwide'] .info-panel {
+  gap: 2.3vh;
+}
+#room[data-layout='ultrawide'] .topbar,
+#room[data-layout='superwide'] .topbar {
+  gap: 3vw;
+}
+
+/* Portrait: information and controls sit above the character, in two columns. */
+:root[data-display='portrait'] .topdatum {
+  display: none;
+}
+:root[data-display='portrait'] .topbar {
+  align-items: center;
+}
+:root[data-display='portrait'] .brand svg {
+  height: 40px;
+  width: 30px;
+}
+:root[data-display='portrait'] .brand strong {
+  font-size: 24px;
+}
+:root[data-display='portrait'] .brand span {
+  font-size: 12px;
+}
+:root[data-display='portrait'] .brand small {
+  display: none;
+}
+:root[data-display='portrait'] .console-panel {
+  display: block;
+}
+:root[data-display='portrait'] .recognition-panel {
+  display: none;
+}
+/* Reserve transient readouts so a meal cannot resize/reposition the portrait. */
+:root[data-display='portrait'] #feedStatus {
+  min-height: 1.6em;
+}
+:root[data-display='portrait'] #feedStatus[hidden],
+:root[data-display='portrait'] #studyProgress[hidden] {
+  display: block !important;
+  visibility: hidden;
+  pointer-events: none;
+}
+:root[data-display='portrait'] .emotion-panel .micro {
+  display: none;
+}
+:root[data-display='portrait'] .environment-data > div:first-child {
+  display: none;
+}
+:root[data-display='portrait'] #consoleOutput {
+  height: clamp(75px, 7vh, 150px);
+}
+:root[data-display='portrait'] .music-panel {
+  height: clamp(120px, 9vh, 190px);
+}
+:root[data-display='portrait'] .small-data dd {
+  max-width: 76%;
+}
+:root[data-display='portrait'] .clock-row {
+  grid-template-columns: auto 1fr auto;
+  column-gap: 14px;
+  row-gap: 7px;
+}
+:root[data-display='portrait'] .run-indicator {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+:root[data-display='portrait'] .system-calendar {
+  grid-column: 2;
+  grid-row: 2;
+}
+:root[data-display='portrait'] #clock {
+  grid-column: 2 / 4;
+  grid-row: 1;
+  text-align: right;
+}
+:root[data-display='portrait'] .day-info {
+  grid-column: 3;
+  grid-row: 2;
+}
+:root[data-display='portrait'] .clock-label,
+:root[data-display='portrait'] .capacity-mark {
+  display: none;
+}
+:root[data-display='portrait'] #date {
+  margin: 0;
+  letter-spacing: 0;
+  font-size: clamp(19px, 2.7vw, 34px);
+}
+:root[data-display='portrait'] .day-info > span {
+  display: none;
+}
+:root[data-display='portrait'] .day-info strong {
+  margin: 0;
+  font-size: clamp(16px, 2.3vw, 24px);
+  min-width: 55px;
+}
+:root[data-display='portrait'] #clock {
+  font-size: clamp(38px, 6vw, 78px);
+}
+
+@media (max-width: 1250px) {
+  .clock-row {
+    grid-template-columns: auto auto auto 1fr;
+  }
+  .capacity-mark {
+    display: none;
+  }
+  .topdatum {
+    font-size: 14px;
+  }
+  .brand strong {
+    font-size: 22px;
+  }
+  .brand span {
+    font-size: 11px;
+  }
+  .small-data dd {
+    font-size: 12px;
+  }
+  .recognition-panel dd {
+    min-width: 68px;
+  }
+}
+@media (max-width: 700px) {
+  .topbar {
+    height: var(--header-height);
+    min-height: 0;
+  }
+  .brand strong {
+    font-size: 22px;
+  }
+  .info-panel {
+    gap: 10px;
+  }
+  .right-panel {
+    width: var(--side-width);
+  }
+  .console-title {
+    font-size: 10px;
+    padding: 6px;
+  }
+  .console-title .barcode {
+    display: none;
+  }
+  #consoleOutput {
+    padding: 0 6px;
+    font-size: 8px;
+    line-height: 1.45;
+  }
+  .console-foot {
+    font-size: 8px;
+    padding: 5px 6px;
+  }
+  .music-kicker,
+  .music-signal {
+    font-size: 8px;
+  }
+  .music-track strong {
+    font-size: 10px;
+  }
+  .music-track > span {
+    font-size: 9px;
+  }
+  :root[data-display='portrait'] .music-panel {
+    height: 96px;
+  }
+  .console-foot {
+    display: none;
+  }
+  .info-panel .small-data,
+  .info-panel .emotion-panel {
+    display: none;
+  }
+  .readout {
+    min-width: 38px;
+  }
+  .weather-place {
+    display: block;
+  }
+  .weather-place > span {
+    margin-top: 4px;
+  }
+  .weather-credit {
+    font-size: 9px;
+  }
+  .weather-fallback {
+    gap: 5px;
+  }
+  .weather-fallback button {
+    padding: 4px;
+    font-size: 9px;
+  }
+  .environment-data > div:nth-child(n + 3) {
+    display: none;
+  }
+  .interaction-panel h2 {
+    font-size: 12px;
+  }
+  .line-button {
+    gap: 6px;
+  }
+  .control-code {
+    display: none;
+  }
+  #studyProgress {
+    font-size: 13px;
+  }
+  .meal-status {
+    font-size: 10px;
+  }
+  .meal-status:before {
+    font-size: 11px;
+  }
+  .chatter-bubble,
+  #room[data-state='feeding'] .chatter-bubble {
+    padding: 10px 15px 12px;
+  }
+  #chatterText,
+  #room[data-state='feeding'] #chatterText {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 5px;
+  }
+  .hug-bubble {
+    padding: 10px 14px;
+  }
+  .hug-bubble strong {
+    font-size: 17px;
+  }
+  .hug-bubble span {
+    display: none;
+  }
+  #room[data-state='asking_hug'] .chatter-heading {
+    display: none;
+  }
+  .character-caption small {
+    font-size: 10px;
+  }
+  .character-caption,
+  #room[data-state='feeding'] .character-caption {
+    font-size: 13px;
+  }
+  .clock-row {
+    column-gap: 10px;
+  }
+  .run-indicator {
+    width: 33px;
+    height: 40px;
+  }
+  .track-labels {
+    font-size: 9px;
+  }
+  #settingsPanel {
+    padding: 20px 20px 14px;
+  }
+  .settings-intro {
+    margin: 12px 0 18px;
+  }
+}

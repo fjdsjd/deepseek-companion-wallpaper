@@ -1,0 +1,32 @@
+{
+  "name": "deepseek-companion-wallpaper",
+  "version": "1.3.0",
+  "description": "图鲸鲸数字生命控制台：带有拖拽互动、学习计时和音乐律动的网页壁纸",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fjdsjd/deepseek-companion-wallpaper.git"
+  },
+  "homepage": "https://github.com/fjdsjd/deepseek-companion-wallpaper#readme",
+  "bugs": {
+    "url": "https://github.com/fjdsjd/deepseek-companion-wallpaper/issues"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/server.mjs",
+    "test": "node --test",
+    "test:browser": "python tests/browser/smoke.py",
+    "format": "prettier --write .",
+    "check:format": "prettier --check .",
+    "check": "npm run check:format && npm test && npm run build"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.12",
+    "prettier": "3.6.2"
+  }
+}

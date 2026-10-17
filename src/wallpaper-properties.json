@@ -1,0 +1,182 @@
+{
+  "showconsole": {
+    "type": "bool",
+    "text": "显示流式控制台",
+    "value": true,
+    "index": 2
+  },
+  "showclock": {
+    "type": "bool",
+    "text": "显示系统时间和当天进度",
+    "value": true,
+    "index": 3
+  },
+  "infoside": {
+    "type": "combo",
+    "text": "节点信息与环境位置",
+    "value": "left",
+    "index": 4,
+    "options": [
+      {
+        "label": "左侧",
+        "value": "left"
+      },
+      {
+        "label": "右侧",
+        "value": "right"
+      }
+    ]
+  },
+  "mousetracking": {
+    "type": "bool",
+    "text": "身体与眼神跟随鼠标",
+    "value": true,
+    "index": 5
+  },
+  "enablepet": {
+    "type": "bool",
+    "text": "开启摸摸头",
+    "value": true,
+    "index": 6
+  },
+  "enablepinch": {
+    "type": "bool",
+    "text": "开启拖拽捏脸",
+    "value": true,
+    "index": 7
+  },
+  "characterscale": {
+    "type": "slider",
+    "text": "角色大小",
+    "value": 100,
+    "min": 75,
+    "max": 120,
+    "step": 1,
+    "precision": 0,
+    "index": 9
+  },
+  "brightness": {
+    "type": "slider",
+    "text": "环境亮度",
+    "value": 88,
+    "min": 45,
+    "max": 115,
+    "step": 1,
+    "precision": 0,
+    "index": 10
+  },
+  "motion": {
+    "type": "slider",
+    "text": "动作幅度",
+    "value": 80,
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "precision": 0,
+    "index": 11
+  },
+  "showparticles": {
+    "type": "bool",
+    "text": "漂浮微尘",
+    "value": true,
+    "index": 12
+  },
+  "fps": {
+    "type": "slider",
+    "text": "帧率上限",
+    "value": 30,
+    "min": 15,
+    "max": 60,
+    "step": 1,
+    "precision": 0,
+    "index": 13
+  },
+  "mealeffects": {
+    "type": "bool",
+    "text": "进食漫画特效",
+    "value": true,
+    "index": 14
+  },
+  "showmusic": {
+    "type": "bool",
+    "text": "显示系统播放与频谱",
+    "value": true,
+    "index": 15
+  },
+  "musicmotion": {
+    "type": "bool",
+    "text": "随音乐节奏律动",
+    "value": true,
+    "index": 16
+  },
+  "musiceffects": {
+    "type": "bool",
+    "text": "听歌漫画符号",
+    "value": true,
+    "index": 17
+  },
+  "musicsensitivity": {
+    "type": "slider",
+    "text": "节奏灵敏度",
+    "value": 100,
+    "min": 50,
+    "max": 150,
+    "step": 1,
+    "precision": 0,
+    "index": 18
+  },
+  "showchatter": {
+    "type": "bool",
+    "text": "偶尔说几句话",
+    "value": true,
+    "index": 20
+  },
+  "chatterinterval": {
+    "type": "slider",
+    "text": "两轮闲聊间隔（秒，略有浮动）",
+    "value": 45,
+    "min": 15,
+    "max": 180,
+    "step": 1,
+    "precision": 0,
+    "index": 21
+  },
+  "avoidtaskbar": {
+    "type": "bool",
+    "text": "避让系统任务栏（底部预留）",
+    "value": true,
+    "index": 22
+  },
+  "studyminutes": {
+    "type": "slider",
+    "text": "每轮学习时长（分钟，下轮生效）",
+    "value": 10,
+    "min": 1,
+    "max": 120,
+    "step": 1,
+    "precision": 0,
+    "index": 23
+  },
+  "shownodeinfo": {
+    "type": "bool",
+    "text": "显示 550W 节点信息",
+    "value": true,
+    "index": 0
+  },
+  "showrootenvironment": {
+    "type": "bool",
+    "text": "显示根服务器环境",
+    "value": true,
+    "index": 1
+  },
+  "noderefresh": {
+    "type": "slider",
+    "text": "节点读数刷新间隔（秒）",
+    "value": 5,
+    "min": 2,
+    "max": 60,
+    "step": 1,
+    "precision": 0,
+    "index": 19
+  }
+}
