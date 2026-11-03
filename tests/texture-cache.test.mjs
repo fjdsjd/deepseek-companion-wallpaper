@@ -66,3 +66,50 @@ test('concurrent requests share one decode; failure is recorded without a retry 
   assert.equal(cache.stats.errors.length, 1);
   assert.equal(cache.stats.textureBytes, 0);
 });
+
+// 壁纸会被放进 allow-scripts 的沙箱 iframe（Wallpaper Engine 网页壁纸、DSH 壁纸引擎等），
+// 此时文档是不透明源，不带 crossOrigin 的图片像素算跨域，texImage2D 会抛 SecurityError。
+const stubImage = (outcome) => {
+  const attempts = [];
+  const previous = globalThis.Image;
+  globalThis.Image = class {
+    constructor() {
+      this.crossOrigin = null;
+      this.onload = null;
+      this.onerror = null;
+    }
+    set src(value) {
+      attempts.push({ src: value, cors: this.crossOrigin });
+      queueMicrotask(() =>
+        outcome(attempts.length) === 'load' ? this.onload?.() : this.onerror?.(),
+      );
+    }
+  };
+  return { attempts, restore: () => (globalThis.Image = previous) };
+};
+
+test('character textures use CORS so a sandboxed host can upload them to WebGL', async () => {
+  const { attempts, restore } = stubImage(() => 'load');
+  try {
+    const cache = new TextureCache({});
+    await cache.request('idle');
+    assert.equal(attempts.length, 1);
+    assert.equal(attempts[0].cors, 'anonymous');
+    assert.equal(attempts[0].src, 'assets/character/idle.png');
+  } finally {
+    restore();
+  }
+});
+
+test('hosts without CORS headers fall back to a plain image decode', async () => {
+  const { attempts, restore } = stubImage((n) => (n === 1 ? 'error' : 'load'));
+  try {
+    const cache = new TextureCache({});
+    await cache.request('idle');
+    assert.equal(attempts.length, 2);
+    assert.equal(attempts[0].cors, 'anonymous');
+    assert.equal(attempts[1].cors, null);
+  } finally {
+    restore();
+  }
+});

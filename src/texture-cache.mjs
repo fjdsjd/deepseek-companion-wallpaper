@@ -1,20 +1,28 @@
+// 用 URL 解码一张图；cors=true 时按 CORS 模式请求（拿到"同源干净"的像素）。
+function decodeImage(url, cors = true) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    if (cors) image.crossOrigin = 'anonymous';
+    image.onload = () => resolve(image);
+    image.onerror = () => reject(Error(`角色素材加载失败: ${url}`));
+    image.src = url;
+  });
+}
+
+// 贴图必须"同源干净"才能进 WebGL：壁纸常被放进 allow-scripts 的沙箱 iframe
+// （DSH 壁纸引擎、Wallpaper Engine 网页壁纸都是这个形态），此时页面是不透明源，
+// 普通 new Image() 拿到的像素会被判跨域，texImage2D 抛 SecurityError，人物整块不画。
+// 先带 crossOrigin 取一次（宿主对壁纸资源带 Access-Control-Allow-Origin，跨域也是干净像素），
+// 失败再退回普通 Image —— 本机预览、file:// 打开等没有 CORS 的场景照旧。
+// 注意：这里不用 fetch，构建脚本禁止壁纸包出现网络 API（见 scripts/build.mjs）。
+function loadWallpaperImage(src) {
+  return decodeImage(src, true).catch(() => decodeImage(src, false));
+}
+
 // Bound both decoded images and GPU textures. The browser's compressed-file
 // cache may retain PNG bytes; no dormant portrait needs a resident GL texture.
 export class TextureCache {
-  constructor(
-    gl,
-    {
-      limit = 8,
-      ttl = 20000,
-      loadImage = (src) =>
-        new Promise((resolve, reject) => {
-          const image = new Image();
-          image.onload = () => resolve(image);
-          image.onerror = () => reject(Error(`角色素材加载失败: ${src}`));
-          image.src = src;
-        }),
-    } = {},
-  ) {
+  constructor(gl, { limit = 8, ttl = 20000, loadImage = loadWallpaperImage } = {}) {
     this.gl = gl;
     this.limit = limit;
     this.ttl = ttl;
