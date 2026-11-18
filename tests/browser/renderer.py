@@ -151,22 +151,22 @@ def main():
                 for(let i=0;i<100;i++)renderer.draw(10000+i*33,'pinching',p);
                 const before=capture();p.pin=[x,y,dx,.008];
                 for(let i=0;i<100;i++)renderer.draw(20000+i*33,'pinching',p);
-                const after=capture();let changed=0,outside=0,hairChanged=0,hairChecked=0;
+                const after=capture();let changed=0,bodyChanged=0,hairChanged=0,hairChecked=0;
                 for(let i=0;i<before.length;i+=4){
                   const px=(i/4)%1000/1000,py=1-Math.floor(i/4/1000)/1000;
                   const delta=Math.max(...[0,1,2,3].map(c=>Math.abs(before[i+c]-after[i+c])));
                   if(py>.48&&py<.57&&((px>.30&&px<.39)||(px>.65&&px<.75))&&before[i]-before[i+2]<12&&before[i+3]>200){hairChecked++;if(delta>1)hairChanged++;}
                   if(delta===0)continue;
                   changed++;
-                  if(px<.26||px>.78||py<.47||py>.63)outside++;
+                  if(py>.8&&delta>1)bodyChanged++;
                 }
-                results.push({side,changed,outside,hairChecked,hairChanged});
+                results.push({side,changed,bodyChanged,hairChecked,hairChanged});
                 if(side==='left')window.leftPinchPreview=document.querySelector('canvas').toDataURL();
               }
               window.rigRenderer=renderer;return results;
             }""")
             for result in pixel_results:
-                check(result['side'] + ': actual GPU cheek pixels move with stationary upper hair and body layers', result['changed'] > 100 and result['outside'] == 0 and result['hairChecked'] > 1000 and result['hairChanged'] == 0, **result)
+                check(result['side'] + ': original local mesh pulls cheek and nearby hair together', result['changed'] > 100 and result['bodyChanged'] == 0 and result['hairChecked'] > 1000 and result['hairChanged'] > 100, **result)
             page.screenshot(path=str(OUT / 'cheek-rig.png'))
             browser.close()
     finally:

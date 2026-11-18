@@ -1,4 +1,4 @@
-"""Real held mouse drags, reversal and release after face/hair compositing."""
+"""Real held mouse drags, reversal and release with the original local mesh."""
 import json
 import threading
 from functools import partial

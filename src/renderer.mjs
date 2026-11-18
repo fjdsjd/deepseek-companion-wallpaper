@@ -9,7 +9,6 @@ import {
   propProtection,
   RESPIRATION_GLSL,
 } from './respiration.mjs';
-import { CHEEK_GLSL } from './cheek-rig.mjs';
 // The original raised brows sit ABOVE the angry brows. Replace both positions
 // completely, feathering only outside them, or the base brow remains visible.
 // Keep WebGL and the CSS fallback on the same authored-image coordinates.
@@ -37,6 +36,7 @@ uniform float u_breath;
 uniform float u_respiration;
 uniform vec4 u_flow;
 uniform vec2 u_protection;
+uniform vec4 u_pin;
 uniform float u_time;
 uniform float u_motion;
 uniform float u_hug;
@@ -50,6 +50,11 @@ void main(){
   v_uv=a_pos;
   vec2 p=a_pos;
   float head=1.0-smoothstep(.55,.68,a_pos.y);
+  // Each press anchors its own cheek. No full-image mirroring or opposite-cheek movement.
+  float cheek=exp(-dot((a_pos-u_pin.xy)/vec2(.105,.087),(a_pos-u_pin.xy)/vec2(.105,.087))*1.7);
+  // The cheek stretches below the lower lids; keep the painted eyes intact.
+  cheek*=smoothstep(.475,.515,a_pos.y);
+  p += u_pin.zw*vec2(1.0,.6)*cheek;
   p.x += sin(u_time*17.0)*.0007*u_cry*head;
   ${RESPIRATION_GLSL}
   float arms=smoothstep(.65,.87,a_pos.y)*smoothstep(.06,.26,abs(a_pos.x-.52));
@@ -83,8 +88,6 @@ uniform vec2 u_expressionWeights;
 uniform float u_blend;
 uniform vec2 u_look;
 uniform float u_eye;
-uniform vec4 u_pin;
-${CHEEK_GLSL}
 float eyeMask(vec2 uv,vec2 center){vec2 p=(uv-center)/vec2(.031,.030);return 1.0-smoothstep(.20,1.0,dot(p,p));}
 float detailEllipse(vec2 uv,vec2 center,vec2 radius){vec2 p=(uv-center)/radius;return 1.0-smoothstep(.64,1.0,dot(p,p));}
 vec4 portrait(sampler2D layer,vec2 uv,float kind){
@@ -97,8 +100,8 @@ vec4 portrait(sampler2D layer,vec2 uv,float kind){
   if(kind>1.5)region=max(region,detailEllipse(uv,vec2(.523,.525),vec2(.065,.047)));
   return vec4(mix(base.rgb,face.rgb,region*face.a),base.a);
 }
-vec4 colorAt(vec2 point){
-  vec2 uv=point;
+void main(){
+  vec2 uv=v_uv;
   vec2 eyeA=vec2(.435,.446),eyeB=vec2(.604,.430);
   float mask=max(eyeMask(uv,eyeA),eyeMask(uv,eyeB));
   // Local iris-area texture deformation, independent of body/head movement.
@@ -114,27 +117,11 @@ vec4 colorAt(vec2 point){
     // cheek silhouette. The same mesh carries the tears along with either drag.
     vec2 faceOffset=vec2(0.0);
     float faceMask=0.0;
-    ${expressionRegions.map(({ center, radius }) => `faceMask=max(faceMask,detailEllipse(point-faceOffset,vec2(${center.join(',')}),vec2(${radius.join(',')})));`).join('\n    ')}
+    ${expressionRegions.map(({ center, radius }) => `faceMask=max(faceMask,detailEllipse(v_uv-faceOffset,vec2(${center.join(',')}),vec2(${radius.join(',')})));`).join('\n    ')}
     vec4 oldFace=texture2D(u_oldExpression,uv-faceOffset),newFace=texture2D(u_expression,uv-faceOffset);
     float wa=u_expressionWeights.x*oldFace.a,wb=u_expressionWeights.y*newFace.a;
     rgb=rgb*(1.0-faceMask*(wa+wb))+alpha*faceMask*(oldFace.rgb*wa+newFace.rgb*wb);
   }
-  return vec4(alpha>.001?rgb/alpha:vec3(0.0),alpha);
-}
-void main(){
-  vec4 base=colorAt(v_uv);
-  if(abs(u_pin.z)+abs(u_pin.w)>.00005){
-    bool left=u_pin.x<.52;
-    vec2 source=cheekSample(v_uv,u_pin);
-    vec4 face=colorAt(source);
-    float skin=cheekLayer(source,face,left);
-    // Hair is the top layer everywhere, including the long side locks. Its
-    // original UVs and edge lighting occlude the face as skin moves underneath.
-    float foregroundHair=1.0-skinLayer(base);
-    float weight=skin*(1.0-foregroundHair);
-    base=vec4(mix(base.rgb,face.rgb,weight),max(base.a,face.a*weight));
-  }
-  vec3 rgb=base.rgb*base.a;float alpha=base.a;
   if(u_spoonState.y>.001){
     vec2 d=v_uv-u_spoonPose.xy;
     float c=cos(u_spoonPose.w),s=sin(u_spoonPose.w);
