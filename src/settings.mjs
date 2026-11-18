@@ -18,6 +18,8 @@ export const DEFAULTS = Object.freeze({
   studyMinutes: 10,
   showChatter: true,
   chatterInterval: 45,
+  voiceEnabled: true,
+  voiceVolume: 55,
   mealEffects: true,
   showMusic: true,
   musicMotion: true,
@@ -35,6 +37,7 @@ export function normalizeSettings(input = {}) {
     ['systemInterval', 2, 60],
     ['chatterInterval', 15, 180],
     ['studyMinutes', 1, 120],
+    ['voiceVolume', 0, 100],
   ]) {
     const value = input[key];
     if (

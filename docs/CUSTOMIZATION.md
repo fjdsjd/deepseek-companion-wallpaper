@@ -12,6 +12,8 @@
 
 每项是一轮对话，每个字符串会依次显示。`idle` 对应待机，`study` 对应看书，`listening` 对应听歌，其他状态也各有句库。句子尽量短，避免把可关闭的小气泡写成大段说明。
 
+新增或修改气泡台词时，还需按 [配音说明](VOICE.md) 生成对应 MP3 并更新 `src/voice-manifest.json`。文字可先独立预览，缺少配音时会保持安静；完整性测试会提示未配音的新句子和不再使用的音频。音色模型只用于开发时合成，不随壁纸分发。
+
 底部临时字幕和侧栏状态名在 [`wallpaper-app.mjs`](../src/wallpaper-app.mjs) 的 `labels` 对象中；进食阶段字幕还会使用 [`feeding.mjs`](../src/feeding.mjs) 的时间线。修改后执行：
 
 ```sh
@@ -100,6 +102,7 @@ npm run check
 python -m pip install -r requirements-dev.txt
 python -m playwright install chromium
 npm run test:browser
+npm run test:voice
 ```
 
 Node 测试适合检查状态机和数学规则；浏览器测试使用真实鼠标拖拽，覆盖 16:10、16:9、4:3 和竖屏布局。音乐测试是宿主回调模拟，实际播放器曲名和桌面输入仍需在 Wallpaper Engine 中确认。

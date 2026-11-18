@@ -67,11 +67,11 @@ export class MusicView {
       textIfChanged(
         document.getElementById('musicStatus'),
         !hostAudio
-          ? '浏览器可读取系统播放名称；实时频谱和节奏律动需在 Wallpaper Engine 中运行。'
+          ? '歌曲信息、频谱与节奏律动需在 Wallpaper Engine 中运行。'
           : hostMedia && !media.enabled
-            ? 'Wallpaper Engine 的媒体信息已关闭，仍可显示系统音频频谱。'
+            ? '在 Wallpaper Engine 设置中开启媒体集成，即可接收播放器提供的曲名。'
             : !hasTrack && audio.active
-              ? '检测到系统音频，播放器尚未提供歌曲名称。'
+              ? '有声音啦～曲名暂未收到，请检查播放器的系统媒体信息开关。'
               : '已接入系统音频；有声音时显示频谱，待机时随节奏轻轻律动。',
       );
     }

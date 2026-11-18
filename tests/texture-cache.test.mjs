@@ -113,3 +113,31 @@ test('hosts without CORS headers fall back to a plain image decode', async () =>
     restore();
   }
 });
+
+test('failed GPU uploads delete the allocation; image fallback releases all GPU memory', async () => {
+  const { cache, deleted } = fixture();
+  await cache.request('idle');
+  await cache.request('blink');
+  cache.texture('idle');
+  cache.gl.texImage2D = () => {
+    throw new DOMException('tainted', 'SecurityError');
+  };
+  assert.throws(() => cache.texture('blink'), /tainted/);
+  assert.deepEqual(deleted, [2]);
+  assert.deepEqual(cache.stats.resident, ['idle']);
+  cache.releaseGPU();
+  cache.releaseGPU();
+  assert.deepEqual(deleted, [2, 1]);
+  assert.equal(cache.stats.textureBytes, 0);
+  assert.deepEqual(cache.stats.decoded, ['idle', 'blink']);
+  assert.equal(cache.texture('idle'), null);
+});
+test('driver upload errors trigger recovery instead of storing a blank texture', async () => {
+  const { cache, deleted } = fixture();
+  await cache.request('idle');
+  cache.gl.NO_ERROR = 0;
+  cache.gl.getError = () => 1285;
+  assert.throws(() => cache.texture('idle'), /Texture upload failed/);
+  assert.deepEqual(deleted, [1]);
+  assert.equal(cache.stats.textureBytes, 0);
+});

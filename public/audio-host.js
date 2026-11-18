@@ -2,20 +2,30 @@
 // of each kind: the host can emit track metadata just once on wallpaper startup.
 (function () {
   var latest = {},
-    subscribers = [];
+    subscribers = [],
+    sequence = 0;
   var bridge = (window.__deepseekAudioHost = {
     audio: false,
     media: false,
     subscribe: function (callback) {
       subscribers.push(callback);
-      Object.keys(latest).forEach(function (kind) {
-        callback(kind, latest[kind].value, latest[kind].at);
-      });
+      Object.keys(latest)
+        .sort(function (a, b) {
+          return latest[a].sequence - latest[b].sequence;
+        })
+        .forEach(function (kind) {
+          callback(kind, latest[kind].value, latest[kind].at);
+        });
     },
   });
   function publish(kind, value) {
     var at = performance.now();
-    latest[kind] = { value: value, at: at };
+    if (kind === 'status' && value && value.enabled === false) {
+      delete latest.properties;
+      delete latest.playback;
+      delete latest.timeline;
+    }
+    latest[kind] = { value: value, at: at, sequence: ++sequence };
     subscribers.forEach(function (callback) {
       callback(kind, value, at);
     });

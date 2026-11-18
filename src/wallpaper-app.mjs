@@ -3,11 +3,13 @@ import { AvatarRenderer } from './renderer.mjs';
 import { headTarget } from './motion.mjs';
 import { FEED_FRAMES, FEED_LAYERS, feedingPose } from './feeding.mjs';
 import { MealEffects } from './meal-effects.mjs';
-import { AudioAnalysis, SystemMedia, playbackState, listeningAllowed } from './audio.mjs';
+import { AudioAnalysis, SystemMedia, listeningAllowed } from './audio.mjs';
 import { MusicView, MusicEffects } from './music-view.mjs';
 import { DEFAULTS, normalizeSettings, readSettings, saveSettings } from './settings.mjs';
 import { Dialogue } from './dialogue.mjs';
 import { DIALOGUE_LABELS } from './dialogue-bank.mjs';
+import { DialogueVoice } from './dialogue-voice.mjs';
+import voiceManifest from './voice-manifest.json';
 import { createScreenLayout } from './screen-layout.mjs';
 import { createSettingsNavigation } from './settings-navigation.mjs';
 import { SETTINGS_KEY, HOST_KEY } from './storage-keys.mjs';
@@ -19,8 +21,17 @@ const $ = (id) => document.getElementById(id),
 const settings = readSettings();
 const nodeReadout = create550WReadout($);
 const screenLayout = createScreenLayout(() => settings);
-const dialogue = new Dialogue();
+const dialogue = new Dialogue({
+  durationMs: (text) => (settings.voiceEnabled ? voiceManifest.clips[text]?.durationMs : 0),
+});
 let dialogueStamp = '';
+const dialogueVoice = new DialogueVoice(voiceManifest);
+document.addEventListener('pointerdown', () => dialogueVoice.unlock(), {
+  capture: true,
+  passive: true,
+});
+document.addEventListener('keydown', () => dialogueVoice.unlock(), { capture: true });
+window.addEventListener('pagehide', () => dialogueVoice.stop());
 const mealEffects = new MealEffects($('mealEffects'));
 const audioAnalysis = new AudioAnalysis(),
   systemMedia = new SystemMedia(),
@@ -194,6 +205,7 @@ function updateDialogue() {
     blocked: !ready || !$('settingsOverlay').hidden,
     interval: settings.chatterInterval,
   });
+  dialogueVoice.sync(item, settings);
   const stamp = `${item.context}:${item.serial}:${item.visible}`;
   if (stamp === dialogueStamp) return;
   dialogueStamp = stamp;
@@ -277,6 +289,8 @@ function wallpaperUser(props) {
   map.showrootenvironment = 'showRootEnvironment';
   map.noderefresh = 'systemInterval';
   map.studyminutes = 'studyMinutes';
+  map.voiceenabled = 'voiceEnabled';
+  map.voicevolume = 'voiceVolume';
   const initialFull = !hostInitialized && Object.keys(props).length >= 8;
   hostInitialized = true;
   const patch = {};
@@ -300,6 +314,7 @@ function wallpaperUser(props) {
 }
 function updatePause() {
   const paused = hostPaused || document.hidden;
+  dialogueVoice.setPaused(paused);
   if (paused && pausedAt === null) {
     pausedAt = Date.now();
     finishDrag(true);
@@ -337,18 +352,17 @@ for (const [type, p] of pending) {
 document.addEventListener('visibilitychange', updatePause);
 audioHost.subscribe?.((kind, data, at) => {
   if (kind === 'audio') {
-    if (pausedAt === null && (settings.showMusic || settings.musicMotion || settings.musicEffects))
+    if (
+      pausedAt === null &&
+      !dialogueVoice.suppressLoopback &&
+      (settings.showMusic || settings.musicMotion || settings.musicEffects)
+    )
       audioAnalysis.ingest(data, at);
   } else if (kind === 'status') systemMedia.hostStatus(data?.enabled);
   else if (systemMedia.enabled) {
     if (kind === 'properties') systemMedia.properties(data || {});
     if (kind === 'playback') {
-      systemMedia.playback = playbackState(data?.state, window.wallpaperMediaIntegration || {});
-      if (systemMedia.playback === 'stopped') {
-        systemMedia.clear();
-        systemMedia.playback = 'stopped';
-        systemMedia.status = 'none';
-      }
+      systemMedia.setPlayback(data?.state, window.wallpaperMediaIntegration || {});
     }
     if (kind === 'timeline') systemMedia.timeline(data);
   }
@@ -680,8 +694,10 @@ function animate(time) {
     allowed = listeningAllowed(companion.state, systemMedia);
   if (audio.active && allowed) musicPortraitUntil = time + 1000;
   if (!allowed) musicPortraitUntil = 0;
+  // Ignore our own voice in host loopback: do not turn speech into a music
+  // transition which would replace its bubble and cut the clip short.
   const listening =
-    (audio.active || time < musicPortraitUntil) &&
+    (dialogueVoice.suppressLoopback ? musicListening : audio.active || time < musicPortraitUntil) &&
     allowed &&
     (settings.showMusic || settings.musicMotion || settings.musicEffects);
   if (listening !== musicListening) {
@@ -788,9 +804,11 @@ const diagnostics = {
 };
 window.__deepseek = diagnostics;
 Object.defineProperty(diagnostics, 'dialogue', { get: () => dialogue.snapshot() });
+Object.defineProperty(diagnostics, 'voice', { get: () => dialogueVoice.snapshot });
 Object.defineProperty(diagnostics, 'layout', { get: () => screenLayout.snapshot });
 Object.defineProperty(diagnostics, 'edition', { value: 'standalone' });
 Object.defineProperty(diagnostics, 'resources', { get: () => renderer?.cache.stats });
+Object.defineProperty(diagnostics, 'rendererError', { get: () => renderer?.fallbackReason || '' });
 if (new URLSearchParams(location.search).get('test') === '1')
   diagnostics.advance = (ms) => {
     testOffset += ms;

@@ -1,0 +1,64 @@
+{
+  "revision": "soft-affection-v2",
+  "mastering": {
+    "revision": "youthful-v3",
+    "pitchSemitones": 2.6,
+    "formantSemitones": 1.2,
+    "tempo": 1.03
+  },
+  "profiles": {
+    "annoyed_1": { "instruction": "请用可爱、轻轻嘟嘴、假装生气的撒娇语气说话。", "speed": 0.97 },
+    "annoyed_2": {
+      "instruction": "请用气鼓鼓又舍不得凶人的语气说话，有一点委屈，娇嗔地撒娇抗议。",
+      "speed": 0.96
+    },
+    "annoyed_3": {
+      "instruction": "请用快要哭出来的委屈语气说话，声音软软轻颤，一边瘪嘴一边撒娇。",
+      "speed": 0.93
+    },
+    "idle": {
+      "instruction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "speed": 0.97
+    },
+    "study": {
+      "instruction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "speed": 0.98
+    },
+    "listening": {
+      "instruction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "speed": 1.0
+    },
+    "petting": {
+      "instruction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "speed": 0.92
+    },
+    "comfort": {
+      "instruction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "speed": 0.94
+    },
+    "pinching": {
+      "instruction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "speed": 0.96
+    },
+    "crying": {
+      "instruction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "speed": 0.92
+    },
+    "asking_hug": {
+      "instruction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "speed": 0.92
+    },
+    "hugging": {
+      "instruction": "请用安心、满足、甜甜带笑的撒娇语气说话，像轻轻窝进怀里。",
+      "speed": 0.94
+    },
+    "study_tired": {
+      "instruction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "speed": 0.93
+    },
+    "feeding": {
+      "instruction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "speed": 1.0
+    }
+  }
+}

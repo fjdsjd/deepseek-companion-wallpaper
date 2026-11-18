@@ -65,7 +65,14 @@ export class SystemMedia {
     if (!this.enabled) {
       this.clear();
       this.status = 'disabled';
-    } else this.status = 'waiting';
+    } else this.status = this.track.title ? 'ok' : 'waiting';
+  }
+  setPlayback(value, constants = {}) {
+    this.playback = playbackState(value, constants);
+    // Some players send STOPPED then PLAYING without repeating properties.
+    // Hide while stopped, but retain metadata so the same track can resume.
+    if (this.playback === 'stopped' || this.playback === 'closed') this.position = 0;
+    this.version++;
   }
 }
 

@@ -114,3 +114,22 @@ test('media uses host constants, clears stale tracks on loss, and survives missi
   assert.equal(media.status, 'disabled');
   assert.equal(normalizeSettings({ musicSensitivity: 999 }).musicSensitivity, 150);
 });
+
+test('stop/resume without another properties event keeps the title, but disable clears it', () => {
+  const media = new SystemMedia();
+  media.properties({ title: '550W', artist: '阿鲲' });
+  media.setPlayback('stopped');
+  assert.equal(media.track.title, '550W');
+  assert.equal(listeningAllowed('idle', media), false);
+  media.setPlayback('playing');
+  assert.equal(media.track.title, '550W');
+  media.hostStatus(true);
+  assert.equal(media.status, 'ok');
+  media.properties({});
+  assert.equal(media.track.title, '');
+  media.properties({ title: 'new' });
+  media.hostStatus(false);
+  media.hostStatus(true);
+  assert.equal(media.track.title, '');
+  assert.equal(media.status, 'waiting');
+});

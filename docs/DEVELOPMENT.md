@@ -4,20 +4,21 @@
 
 `public/index.html` 提供静态界面和宿主属性回调的早期队列。构建将 `src/wallpaper-app.mjs` 及其本地导入打包到 `dist/app.js`。`public/audio-host.js` 注册宿主音频/媒体回调，由应用消费。
 
-| 模块                                           | 负责内容                            |
-| ---------------------------------------------- | ----------------------------------- |
-| `companion.mjs`                                | 互动状态机与学习、进食、拥抱计时    |
-| `wallpaper-app.mjs`                            | DOM、输入事件、宿主回调、各模块调度 |
-| `renderer.mjs`                                 | WebGL 网格、局部表情合成与图片降级  |
-| `motion.mjs`、`respiration.mjs`                | 头身运动限制、胸口呼吸、发丝权重    |
-| `texture-cache.mjs`                            | 按需加载、纹理驻留、闲置回收        |
-| `feeding.mjs`、`meal-effects.mjs`              | 勺子轨迹、咀嚼与进食漫画符号        |
-| `audio.mjs`、`music-view.mjs`                  | 频谱分析、媒体信息、听歌姿态与符号  |
-| `dialogue-bank.mjs`、`dialogue.mjs`            | 本地句库、轮换、显示时间与关闭行为  |
-| `settings.mjs`、`storage-keys.mjs`             | 设置归一化与稳定的本地存储键        |
-| `screen-layout.mjs`、`settings-navigation.mjs` | 屏幕适配与设置翻页按钮              |
-| `550w-telemetry.mjs`                           | 场景中的节点和环境读数              |
-| `frame-loop.mjs`、`dom-update.mjs`             | 帧调度与避免重复 DOM 更新           |
+| 模块                                           | 负责内容                                 |
+| ---------------------------------------------- | ---------------------------------------- |
+| `companion.mjs`                                | 互动状态机与学习、进食、拥抱计时         |
+| `wallpaper-app.mjs`                            | DOM、输入事件、宿主回调、各模块调度      |
+| `renderer.mjs`                                 | WebGL 网格、局部表情合成与图片降级       |
+| `motion.mjs`、`respiration.mjs`                | 头身运动限制、胸口呼吸、发丝权重         |
+| `texture-cache.mjs`                            | 按需加载、纹理驻留、闲置回收             |
+| `feeding.mjs`、`meal-effects.mjs`              | 勺子轨迹、咀嚼与进食漫画符号             |
+| `audio.mjs`、`music-view.mjs`                  | 频谱分析、媒体信息、听歌姿态与符号       |
+| `dialogue-bank.mjs`、`dialogue.mjs`            | 本地句库、轮换、显示时间与关闭行为       |
+| `dialogue-voice.mjs`、`voice-manifest.json`    | 气泡配音、单播放器生命周期与本地音频映射 |
+| `settings.mjs`、`storage-keys.mjs`             | 设置归一化与稳定的本地存储键             |
+| `screen-layout.mjs`、`settings-navigation.mjs` | 屏幕适配与设置翻页按钮                   |
+| `550w-telemetry.mjs`                           | 场景中的节点和环境读数                   |
+| `frame-loop.mjs`、`dom-update.mjs`             | 帧调度与避免重复 DOM 更新                |
 
 ## 修改互动时要保留的规则
 
@@ -41,6 +42,8 @@ Wallpaper Engine 的鼠标事件与普通浏览器可能不同。输入同时兼
 
 修改句子可编辑 `dialogue-bank.mjs`。底部短字幕及状态说明在 `wallpaper-app.mjs` 的 `labels` 中。
 
+气泡配音只使用预生成的本地 MP3。新增台词后的合成流程见 [VOICE.md](VOICE.md)；`npm run test:voice` 验证真实音频解码、播放、关闭和宿主暂停恢复。该测试模拟宿主回调，不代表 Wallpaper Engine 实机验证。
+
 ## 构建与验证
 
 `npm run check` 是基础检查。`npm run test:browser` 另外覆盖真实鼠标拖拽、表情状态、吃饭、看书、音频回调、设置保存、暂停和多比例布局，报告位于 `test-results/browser/`。
@@ -50,3 +53,9 @@ Wallpaper Engine 的鼠标事件与普通浏览器可能不同。输入同时兼
 `dist/integrity.json` 记录构建文件的 SHA-256 和字节数；不含时间戳，相同源码和依赖可以比较重建结果。源码目录、原始贴图和构建目录不要混用，所有定制修改都应先写入 `src/`、`public/` 或根目录的配置文件。
 
 提交前应检查新图片尺寸、资源请求、控制台错误和互动连贯性。需要发布到工坊时，再到 Wallpaper Engine 编辑器内预览和提交。
+
+## 脸颊与头发遮挡
+
+`src/cheek-rig.mjs` 提供脸颊采样参数。渲染时沿用原画的像素，分别合成人物底层、可变形脸颊和最上方头发；全部发束保持原始 UV，脸颊从头发下方经过。无需为每种表情复制一套大贴图。遮罩的肤色阈值针对当前蓝发暖肤色角色，换色或换角色时需相应调整。
+
+拉伸用逆向采样，外拉、内压和上下拖动分别有不同范围；释放沿原交互弹簧回位。`tests/browser/pinch.py` 验证真实按住拖动、反向与释放；`tests/browser/renderer.py` 检查脸颊像素变化且两侧发束像素保持原样。图形故障的图片回退模式保留状态互动，但不执行网格和脸颊变形。

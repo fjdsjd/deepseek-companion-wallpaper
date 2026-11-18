@@ -67,20 +67,39 @@ export class TextureCache {
   }
   texture(name) {
     const entry = this.entries.get(name);
-    if (!entry?.image) return null;
+    if (!entry?.image || !this.gl) return null;
     if (!entry.texture) {
       const gl = this.gl,
         texture = gl.createTexture();
-      gl.bindTexture(gl.TEXTURE_2D, texture);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, entry.image);
+      if (!texture) throw Error(`Texture allocation failed: ${name}`);
+      try {
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, entry.image);
+        // Drivers can report upload/OOM failures without throwing a JS error.
+        const error = gl.getError?.();
+        if (error !== undefined && error !== gl.NO_ERROR)
+          throw Error(`Texture upload failed: ${name} (${error})`);
+      } catch (error) {
+        gl.deleteTexture(texture);
+        this.errors.push(String(error));
+        throw error;
+      }
       entry.texture = texture;
       this.textures[name] = texture;
     }
     return entry.texture;
+  }
+  releaseGPU() {
+    for (const entry of this.entries.values()) {
+      if (entry.texture) this.gl?.deleteTexture(entry.texture);
+      entry.texture = null;
+      delete this.textures[entry.name];
+    }
+    this.gl = null;
   }
   trim(now, force = false) {
     // TTL cleanup is throttled, but memory pressure is handled immediately:

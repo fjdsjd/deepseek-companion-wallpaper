@@ -9,6 +9,7 @@ import {
   propProtection,
   RESPIRATION_GLSL,
 } from './respiration.mjs';
+import { CHEEK_GLSL } from './cheek-rig.mjs';
 // The original raised brows sit ABOVE the angry brows. Replace both positions
 // completely, feathering only outside them, or the base brow remains visible.
 // Keep WebGL and the CSS fallback on the same authored-image coordinates.
@@ -36,7 +37,6 @@ uniform float u_breath;
 uniform float u_respiration;
 uniform vec4 u_flow;
 uniform vec2 u_protection;
-uniform vec4 u_pin;
 uniform float u_time;
 uniform float u_motion;
 uniform float u_hug;
@@ -50,11 +50,6 @@ void main(){
   v_uv=a_pos;
   vec2 p=a_pos;
   float head=1.0-smoothstep(.55,.68,a_pos.y);
-  // Each press anchors its own cheek. No full-image mirroring or opposite-cheek movement.
-  float cheek=exp(-dot((a_pos-u_pin.xy)/vec2(.105,.087),(a_pos-u_pin.xy)/vec2(.105,.087))*1.7);
-  // The cheek stretches below the lower lids; keep the painted eyes intact.
-  cheek*=smoothstep(.475,.515,a_pos.y);
-  p += u_pin.zw*vec2(1.0,.6)*cheek;
   p.x += sin(u_time*17.0)*.0007*u_cry*head;
   ${RESPIRATION_GLSL}
   float arms=smoothstep(.65,.87,a_pos.y)*smoothstep(.06,.26,abs(a_pos.x-.52));
@@ -88,6 +83,8 @@ uniform vec2 u_expressionWeights;
 uniform float u_blend;
 uniform vec2 u_look;
 uniform float u_eye;
+uniform vec4 u_pin;
+${CHEEK_GLSL}
 float eyeMask(vec2 uv,vec2 center){vec2 p=(uv-center)/vec2(.031,.030);return 1.0-smoothstep(.20,1.0,dot(p,p));}
 float detailEllipse(vec2 uv,vec2 center,vec2 radius){vec2 p=(uv-center)/radius;return 1.0-smoothstep(.64,1.0,dot(p,p));}
 vec4 portrait(sampler2D layer,vec2 uv,float kind){
@@ -100,8 +97,8 @@ vec4 portrait(sampler2D layer,vec2 uv,float kind){
   if(kind>1.5)region=max(region,detailEllipse(uv,vec2(.523,.525),vec2(.065,.047)));
   return vec4(mix(base.rgb,face.rgb,region*face.a),base.a);
 }
-void main(){
-  vec2 uv=v_uv;
+vec4 colorAt(vec2 point){
+  vec2 uv=point;
   vec2 eyeA=vec2(.435,.446),eyeB=vec2(.604,.430);
   float mask=max(eyeMask(uv,eyeA),eyeMask(uv,eyeB));
   // Local iris-area texture deformation, independent of body/head movement.
@@ -117,11 +114,27 @@ void main(){
     // cheek silhouette. The same mesh carries the tears along with either drag.
     vec2 faceOffset=vec2(0.0);
     float faceMask=0.0;
-    ${expressionRegions.map(({ center, radius }) => `faceMask=max(faceMask,detailEllipse(v_uv-faceOffset,vec2(${center.join(',')}),vec2(${radius.join(',')})));`).join('\n    ')}
+    ${expressionRegions.map(({ center, radius }) => `faceMask=max(faceMask,detailEllipse(point-faceOffset,vec2(${center.join(',')}),vec2(${radius.join(',')})));`).join('\n    ')}
     vec4 oldFace=texture2D(u_oldExpression,uv-faceOffset),newFace=texture2D(u_expression,uv-faceOffset);
     float wa=u_expressionWeights.x*oldFace.a,wb=u_expressionWeights.y*newFace.a;
     rgb=rgb*(1.0-faceMask*(wa+wb))+alpha*faceMask*(oldFace.rgb*wa+newFace.rgb*wb);
   }
+  return vec4(alpha>.001?rgb/alpha:vec3(0.0),alpha);
+}
+void main(){
+  vec4 base=colorAt(v_uv);
+  if(abs(u_pin.z)+abs(u_pin.w)>.00005){
+    bool left=u_pin.x<.52;
+    vec2 source=cheekSample(v_uv,u_pin);
+    vec4 face=colorAt(source);
+    float skin=cheekLayer(source,face,left);
+    // Hair is the top layer everywhere, including the long side locks. Its
+    // original UVs and edge lighting occlude the face as skin moves underneath.
+    float foregroundHair=1.0-skinLayer(base);
+    float weight=skin*(1.0-foregroundHair);
+    base=vec4(mix(base.rgb,face.rgb,weight),max(base.a,face.a*weight));
+  }
+  vec3 rgb=base.rgb*base.a;float alpha=base.a;
   if(u_spoonState.y>.001){
     vec2 d=v_uv-u_spoonPose.xy;
     float c=cos(u_spoonPose.w),s=sin(u_spoonPose.w);
@@ -188,31 +201,51 @@ export class AvatarRenderer {
     this.params = { look: [0, 0], head: [0, 0], pin: [0.5, 0.5, 0, 0], feed: [0, 0, 0] };
     this.params.pose = bodyPose([0, 0], [0, 0], 0, 0);
     this.velocity = { head: [0, 0], pin: [0, 0] };
-    this.gl = canvas.getContext('webgl', {
-      alpha: true,
-      antialias: false,
-      premultipliedAlpha: false,
-      preserveDrawingBuffer: false,
-      powerPreference: 'low-power',
-    });
+    this.buffers = [];
+    this.shaders = [];
+    this.fallbackReason = '';
+    try {
+      this.gl = canvas.getContext('webgl', {
+        alpha: true,
+        antialias: false,
+        premultipliedAlpha: false,
+        preserveDrawingBuffer: false,
+        powerPreference: 'low-power',
+      });
+    } catch (error) {
+      this.gl = null;
+      this.fallbackReason = String(error);
+    }
     this.cache = new TextureCache(this.gl);
     this.images = this.cache.images;
     this.textures = this.cache.textures;
-    if (!this.gl) {
-      canvas.hidden = true;
-      fallback.hidden = false;
-      this.backend = 'image-fallback';
-      return;
+    canvas.addEventListener('webglcontextlost', (e) => {
+      e.preventDefault();
+      this.activateFallback('WebGL context lost');
+    });
+    // Keep the working image renderer after a context loss. Reloading the page
+    // discarded the user's state and could repeatedly crash the same GPU.
+    try {
+      if (!this.gl) throw Error(this.fallbackReason || 'WebGL unavailable');
+      this.initializeWebGL();
+    } catch (error) {
+      this.activateFallback(error);
     }
+  }
+  initializeWebGL() {
     const gl = this.gl;
     const compile = (type, source) => {
       const sh = gl.createShader(type);
+      if (!sh) throw Error('Shader allocation failed');
+      this.shaders.push(sh);
       gl.shaderSource(sh, source);
       gl.compileShader(sh);
-      if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) throw Error(gl.getShaderInfoLog(sh));
+      if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS))
+        throw Error(gl.getShaderInfoLog(sh) || 'Shader compile failed');
       return sh;
     };
-    const program = gl.createProgram();
+    const program = (this.program = gl.createProgram());
+    if (!program) throw Error('Program allocation failed');
     gl.attachShader(program, compile(gl.VERTEX_SHADER, VERTEX));
     gl.attachShader(program, compile(gl.FRAGMENT_SHADER, FRAGMENT));
     gl.linkProgram(program);
@@ -256,6 +289,7 @@ export class AvatarRenderer {
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
     const mesh = buildAvatarMesh();
     const buffer = gl.createBuffer();
+    this.buffers.push(buffer);
     gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
     gl.bufferData(gl.ARRAY_BUFFER, mesh.vertices, gl.STATIC_DRAW);
     for (const [name, size, offset] of [
@@ -269,6 +303,7 @@ export class AvatarRenderer {
       gl.vertexAttribPointer(a, size, gl.FLOAT, false, RIG_STRIDE * 4, offset * 4);
     }
     const indices = gl.createBuffer();
+    this.buffers.push(indices);
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indices);
     gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, mesh.indices, gl.STATIC_DRAW);
     this.count = mesh.indices.length;
@@ -276,18 +311,33 @@ export class AvatarRenderer {
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
     gl.clearColor(0, 0, 0, 0);
     this.backend = 'webgl-mesh';
-    canvas.addEventListener('webglcontextlost', (e) => {
-      e.preventDefault();
-      this.lost = true;
-      fallback.src = this.images[this.current]?.src || fallback.src;
-      fallback.hidden = false;
-      canvas.hidden = true;
-    });
-    canvas.addEventListener('webglcontextrestored', () => location.reload());
+  }
+  activateFallback(reason) {
+    if (this.backend === 'image-fallback') return;
+    this.fallbackReason = String(reason);
+    console.warn('Avatar switched to image renderer:', this.fallbackReason);
+    const gl = this.gl;
+    this.cache.releaseGPU();
+    if (gl) {
+      for (const buffer of this.buffers) if (buffer) gl.deleteBuffer(buffer);
+      for (const shader of this.shaders) gl.deleteShader(shader);
+      if (this.program) gl.deleteProgram(this.program);
+      if (this.emptyTexture) gl.deleteTexture(this.emptyTexture);
+    }
+    this.buffers = [];
+    this.shaders = [];
+    this.program = this.emptyTexture = null;
+    this.gl = null;
+    this.backend = 'image-fallback';
+    this.canvas.hidden = true;
+    this.fallback.hidden = false;
+    this.fallback.src = this.images[portraitBase(this.current)]?.src || this.fallback.src;
   }
   async load(names) {
     this.available = new Set(names.map(portraitFace));
-    await Promise.all(['idle', 'blink'].map((name) => this.cache.request(name)));
+    await this.cache.request('idle');
+    // A missing optional blink must not hide the otherwise valid character.
+    this.cache.request('blink').catch((error) => console.warn(error));
   }
   hitPoint(point) {
     return unposeHead(point, this.params.pose);
@@ -417,48 +467,84 @@ export class AvatarRenderer {
       face: portraitFace(frame),
       kind: portraitKind(frame),
     };
-    if (!this.gl || this.lost) {
-      // A flat-image fallback cannot deform hair/chest. Do not substitute the
-      // old whole-image bob or shrink the portrait during meals.
-      this.fallback.style.transformOrigin = '50% 7%';
-      this.fallback.style.transform = `rotate(${pose.bodyAngle}rad)`;
-      const baseSrc = this.images[portraitBase(frame)]?.src;
-      if (baseSrc && this.fallback.src !== baseSrc) this.fallback.src = baseSrc;
-      const kind = portraitKind(frame);
-      this.faceFallback.hidden = !kind;
-      if (kind) {
-        const src = this.images[portraitFace(frame)].src;
-        if (this.faceFallback.src !== src) this.faceFallback.src = src;
-        this.faceFallback.style.maskImage =
-          eyeDetailMask + (kind === 2 ? ',' + mouthDetailMask : '');
-        this.faceFallback.style.transformOrigin = this.fallback.style.transformOrigin;
-        this.faceFallback.style.transform = this.fallback.style.transform;
-      }
-      this.spoonFallback.hidden = !(p.meal && inMeal);
-      if (p.meal && inMeal) {
-        if (this.emptySpoon.src !== this.images.spoon_empty.src)
-          this.emptySpoon.src = this.images.spoon_empty.src;
-        if (this.fullSpoon.src !== this.images.spoon_loaded.src)
-          this.fullSpoon.src = this.images.spoon_loaded.src;
-        const spoon = p.meal.spoon;
-        this.spoonFallback.style.transformOrigin = this.fallback.style.transformOrigin;
-        this.spoonFallback.style.transform = this.fallback.style.transform;
-        this.spoonSprite.style.left = `${spoon.x * 100}%`;
-        this.spoonSprite.style.top = `${spoon.y * 100}%`;
-        this.spoonSprite.style.width = `${spoon.width * 100}%`;
-        this.spoonSprite.style.transform = `rotate(${spoon.angle}rad) translate(${-SPOON_ANCHOR[0] * 100}%,${-SPOON_ANCHOR[1] * 100}%)`;
-        this.spoonSprite.style.opacity = String(spoon.opacity);
-        this.fullSpoon.style.opacity = String(spoon.loaded);
-      }
-      this.expressionFallback.hidden = !expression;
-      if (expression) {
-        const src = this.images[`annoyed_${expression}`].src;
-        if (this.expressionFallback.src !== src) this.expressionFallback.src = src;
-        this.expressionFallback.style.transformOrigin = this.fallback.style.transformOrigin;
-        this.expressionFallback.style.transform = this.fallback.style.transform;
-      }
+    if (!this.gl) {
+      this.drawFallback(frame, expression, p, inMeal, pose);
       return;
     }
+    try {
+      this.drawWebGL(
+        time,
+        state,
+        p,
+        blend,
+        expression,
+        expressionBlend,
+        respiration,
+        protection,
+        pose,
+        look,
+        pin,
+        frame,
+      );
+    } catch (error) {
+      this.activateFallback(error);
+      this.drawFallback(frame, expression, p, inMeal, pose);
+    }
+  }
+  drawFallback(frame, expression, p, inMeal, pose) {
+    // A flat-image fallback cannot deform hair/chest. Do not substitute the
+    // old whole-image bob or shrink the portrait during meals.
+    this.fallback.style.transformOrigin = '50% 7%';
+    this.fallback.style.transform = `rotate(${pose.bodyAngle}rad)`;
+    const baseSrc = this.images[portraitBase(frame)]?.src;
+    if (baseSrc && this.fallback.src !== baseSrc) this.fallback.src = baseSrc;
+    const kind = portraitKind(frame);
+    this.faceFallback.hidden = !kind;
+    if (kind) {
+      const src = this.images[portraitFace(frame)].src;
+      if (this.faceFallback.src !== src) this.faceFallback.src = src;
+      this.faceFallback.style.maskImage = eyeDetailMask + (kind === 2 ? ',' + mouthDetailMask : '');
+      this.faceFallback.style.transformOrigin = this.fallback.style.transformOrigin;
+      this.faceFallback.style.transform = this.fallback.style.transform;
+    }
+    this.spoonFallback.hidden = !(p.meal && inMeal);
+    if (p.meal && inMeal) {
+      if (this.emptySpoon.src !== this.images.spoon_empty.src)
+        this.emptySpoon.src = this.images.spoon_empty.src;
+      if (this.fullSpoon.src !== this.images.spoon_loaded.src)
+        this.fullSpoon.src = this.images.spoon_loaded.src;
+      const spoon = p.meal.spoon;
+      this.spoonFallback.style.transformOrigin = this.fallback.style.transformOrigin;
+      this.spoonFallback.style.transform = this.fallback.style.transform;
+      this.spoonSprite.style.left = `${spoon.x * 100}%`;
+      this.spoonSprite.style.top = `${spoon.y * 100}%`;
+      this.spoonSprite.style.width = `${spoon.width * 100}%`;
+      this.spoonSprite.style.transform = `rotate(${spoon.angle}rad) translate(${-SPOON_ANCHOR[0] * 100}%,${-SPOON_ANCHOR[1] * 100}%)`;
+      this.spoonSprite.style.opacity = String(spoon.opacity);
+      this.fullSpoon.style.opacity = String(spoon.loaded);
+    }
+    this.expressionFallback.hidden = !expression;
+    if (expression) {
+      const src = this.images[`annoyed_${expression}`].src;
+      if (this.expressionFallback.src !== src) this.expressionFallback.src = src;
+      this.expressionFallback.style.transformOrigin = this.fallback.style.transformOrigin;
+      this.expressionFallback.style.transform = this.fallback.style.transform;
+    }
+  }
+  drawWebGL(
+    time,
+    state,
+    p,
+    blend,
+    expression,
+    expressionBlend,
+    respiration,
+    protection,
+    pose,
+    look,
+    pin,
+    frame,
+  ) {
     const gl = this.gl;
     const size = Math.min(
       1254,

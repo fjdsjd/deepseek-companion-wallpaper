@@ -56,11 +56,14 @@ jobs:
       - run: python -m pip install -r requirements-dev.txt
       - run: python -m playwright install --with-deps chromium
       - run: npm run test:browser
+      - run: npm run test:voice
+      - run: npm run test:renderer
+      - run: npm run test:pinch
       - name: Browser diagnostics on failure
         if: failure()
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
           name: browser-diagnostics
-          path: test-results/browser/
+          path: test-results/
           if-no-files-found: ignore
           retention-days: 7

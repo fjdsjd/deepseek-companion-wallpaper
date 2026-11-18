@@ -17,7 +17,8 @@ export function dialogueContext(
 
 // Uses the existing active animation clock: no extra timer, fetch or model call.
 export class Dialogue {
-  constructor({ random = Math.random } = {}) {
+  constructor({ random = Math.random, durationMs = () => 0 } = {}) {
+    this.durationMs = durationMs;
     this.random = random;
     this.context = null;
     this.group = null;
@@ -58,7 +59,10 @@ export class Dialogue {
     this.until = now + this.duration(this.group[0]);
   }
   duration(text) {
-    return Math.min(7500, Math.max(5000, Array.from(text).length * 220));
+    return Math.max(
+      Math.min(7500, Math.max(5000, Array.from(text).length * 220)),
+      Math.min(30000, (Number(this.durationMs(text)) || 0) + 450),
+    );
   }
   dismiss(now) {
     // Skip the entire exchange, including its second line. Keep future chatter

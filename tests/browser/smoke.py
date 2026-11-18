@@ -38,13 +38,15 @@ def main():
 
     try:
         with sync_playwright() as playwright:
-            browser = playwright.chromium.launch(headless=True)
+            browser = playwright.chromium.launch(headless=True,args=['--use-angle=swiftshader','--enable-unsafe-swiftshader'])
             try:
                 page = browser.new_page(viewport={"width": 1920, "height": 1080})
                 page.on("pageerror", lambda error: errors.append(str(error)))
                 page.on("console", lambda message: errors.append(message.text) if message.type == "error" else None)
                 page.on("request", lambda request: requests.append(request.url))
                 page.add_init_script("""
+                  const settingsKey = 'deepseek-room.standalone.settings.v1';
+                  localStorage.setItem(settingsKey,JSON.stringify({...JSON.parse(localStorage.getItem(settingsKey)||'{}'),voiceEnabled:false}));
                   window.mockHost = {};
                   for (const [api, key] of [
                     ['wallpaperRegisterAudioListener', 'audio'],

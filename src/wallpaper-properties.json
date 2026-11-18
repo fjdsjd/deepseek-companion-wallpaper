@@ -178,5 +178,21 @@
     "step": 1,
     "precision": 0,
     "index": 19
+  },
+  "voiceenabled": {
+    "type": "bool",
+    "text": "鲸鲸气泡配音",
+    "value": true,
+    "index": 24
+  },
+  "voicevolume": {
+    "type": "slider",
+    "text": "鲸鲸说话音量",
+    "value": 55,
+    "min": 0,
+    "max": 100,
+    "step": 1,
+    "precision": 0,
+    "index": 25
   }
 }

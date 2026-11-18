@@ -28,6 +28,12 @@
 
 角色使用 PNG 图层与自定义 WebGL 二维网格变形实现，未包含 Cubism 的 `.moc3` 模型。WebGL 不可用时会退回简化图片动画。
 
+## 气泡配音
+
+鲸鲸会用偏稚嫩、轻软的肥鱼声线读出聊天气泡，按摸头、委屈、抱抱、吃饭等 14 种状态分别配音，颜文字只显示、不朗读。设置里可关闭配音或调整说话音量，默认开启、55%。关闭气泡立即停下，壁纸暂停时语音同步暂停。配音以本地 MP3 随壁纸打包，运行时无需模型或声音服务。
+
+声音来源特别感谢 @莱恩希德公爵，音源署名及重新配音步骤见 [配音说明](docs/VOICE.md)。
+
 ## 本地开发
 
 安装 Git 和 Node.js 22 或更新版本，然后运行：
@@ -48,14 +54,15 @@ npm start
 
 ## 从哪里开始二次开发
 
-| 想修改的内容               | 入口                                                                                                                               |
-| -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| 闲聊台词与各状态短句       | [`src/dialogue-bank.mjs`](src/dialogue-bank.mjs)，[`wallpaper-app.mjs`](src/wallpaper-app.mjs) 中的 `labels`                       |
-| 角色、表情或书房背景       | [`public/assets/`](public/assets/)，[贴图坐标与合成规则](docs/DEVELOPMENT.md#更换角色图)                                           |
-| 摸头、捏脸、学习和拥抱规则 | [`src/companion.mjs`](src/companion.mjs) 与 [`tests/companion.test.mjs`](tests/companion.test.mjs)                                 |
-| 呼吸、发丝和鼠标跟随幅度   | [`src/respiration.mjs`](src/respiration.mjs)、[`src/motion.mjs`](src/motion.mjs)                                                   |
-| UI 配色、字体与比例适配    | [`public/style.css`](public/style.css)、[`public/layout.css`](public/layout.css)、[`src/screen-layout.mjs`](src/screen-layout.mjs) |
-| 默认设置与工坊属性         | [`src/settings.mjs`](src/settings.mjs)、[`src/wallpaper-properties.json`](src/wallpaper-properties.json)                           |
+| 想修改的内容               | 入口                                                                                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| 闲聊台词与各状态短句       | [`src/dialogue-bank.mjs`](src/dialogue-bank.mjs)，[`wallpaper-app.mjs`](src/wallpaper-app.mjs) 中的 `labels`                               |
+| 气泡配音与声音替换         | [`docs/VOICE.md`](docs/VOICE.md)、[`src/voice-manifest.json`](src/voice-manifest.json)、[`src/dialogue-voice.mjs`](src/dialogue-voice.mjs) |
+| 角色、表情或书房背景       | [`public/assets/`](public/assets/)，[贴图坐标与合成规则](docs/DEVELOPMENT.md#更换角色图)                                                   |
+| 摸头、捏脸、学习和拥抱规则 | [`src/companion.mjs`](src/companion.mjs) 与 [`tests/companion.test.mjs`](tests/companion.test.mjs)                                         |
+| 呼吸、发丝和鼠标跟随幅度   | [`src/respiration.mjs`](src/respiration.mjs)、[`src/motion.mjs`](src/motion.mjs)                                                           |
+| UI 配色、字体与比例适配    | [`public/style.css`](public/style.css)、[`public/layout.css`](public/layout.css)、[`src/screen-layout.mjs`](src/screen-layout.mjs)         |
+| 默认设置与工坊属性         | [`src/settings.mjs`](src/settings.mjs)、[`src/wallpaper-properties.json`](src/wallpaper-properties.json)                                   |
 
 推荐先修改一句台词，重新构建后在浏览器确认，再尝试更换素材或扩展互动。[二次开发指南](docs/CUSTOMIZATION.md) 提供可直接照做的示例和新增状态、配置项时需要同步的文件。提交改动前可参考 [贡献指南](CONTRIBUTING.md)。
 
@@ -102,14 +109,19 @@ python -m pip install -r requirements-dev.txt
 python -m playwright install chromium
 npm run build
 npm run test:browser
+npm run test:voice
+npm run test:renderer
+npm run test:pinch
 ```
 
 测试会使用真实鼠标拖拽输入、模拟宿主音频回调，并把报告与截图写入 `test-results/browser/`。Wallpaper Engine 的实际桌面输入和音频仍应在宿主中复查。
 
 每次推送和 Pull Request 会触发 GitHub Actions：Windows / Linux 运行格式、单元测试和构建，Linux 再运行 Chromium 互动回归。失败时可以在对应工作流下载浏览器报告与截图。
 
+遇到人物不显示、图形异常或曲名缺失时，先看 [故障排查](docs/TROUBLESHOOTING.md)。[更新记录](CHANGELOG.md) 记录各版变化。
+
 ## 许可
 
-项目代码与自行编写的说明采用 [MIT](LICENSE)。PNG、GIF 等视觉素材单独说明，**不自动套用代码的 MIT 许可**；字体保留各自的 SIL Open Font License。素材范围见 [ASSETS.md](ASSETS.md)，第三方依赖见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+项目代码与自行编写的说明采用 [MIT](LICENSE)。PNG、GIF 等视觉素材及合成配音单独说明，**不自动套用代码的 MIT 许可**；字体保留各自的 SIL Open Font License。素材范围见 [ASSETS.md](ASSETS.md)，声音来源见 [配音说明](docs/VOICE.md)，第三方依赖见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
 这是非官方同人项目，与 DeepSeek、《流浪地球》及 Wallpaper Engine 的相关权利方没有隶属或背书关系。

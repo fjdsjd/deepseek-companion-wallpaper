@@ -1,0 +1,1926 @@
+{
+  "schema": 1,
+  "voice": "feiyu",
+  "style": "cute",
+  "source": "https://github.com/Esmerubphire/astrbot_plugin_feiyu_voice",
+  "checkpointSha256": "31a87a0f83ae9987285e115dd0d2048a0f52db44fa40d48e8da1cfefea12affc",
+  "clips": {
+    "哼，小鲸鱼也会生气的 (｡•ˇ‸ˇ•｡)": {
+      "file": "assets/voice/45da919a3f5322af.mp3",
+      "durationMs": 2376,
+      "spokenText": "哼，小鲸鱼也会生气的",
+      "mood": "annoyed_1",
+      "direction": "请用可爱、轻轻嘟嘴、假装生气的撒娇语气说话。",
+      "recipeSha256": "21694cf995c27983fd9cdead084a9ad4e90986dd4467dbc9e5be6c3abeb78866",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "先摆一下小尾巴。": {
+      "file": "assets/voice/11c582353dee6072.mp3",
+      "durationMs": 1656,
+      "spokenText": "先摆一下小尾巴。",
+      "mood": "annoyed_1",
+      "direction": "请用可爱、轻轻嘟嘴、假装生气的撒娇语气说话。",
+      "recipeSha256": "21694cf995c27983fd9cdead084a9ad4e90986dd4467dbc9e5be6c3abeb78866",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "被你捏扁一点点啦。": {
+      "file": "assets/voice/312ca2628c0ffb96.mp3",
+      "durationMs": 1920,
+      "spokenText": "被你捏扁一点点啦。",
+      "mood": "annoyed_1",
+      "direction": "请用可爱、轻轻嘟嘴、假装生气的撒娇语气说话。",
+      "recipeSha256": "21694cf995c27983fd9cdead084a9ad4e90986dd4467dbc9e5be6c3abeb78866",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我要鼓回来。": {
+      "file": "assets/voice/2e6ab5e2532dfc22.mp3",
+      "durationMs": 1368,
+      "spokenText": "我要鼓回来。",
+      "mood": "annoyed_1",
+      "direction": "请用可爱、轻轻嘟嘴、假装生气的撒娇语气说话。",
+      "recipeSha256": "21694cf995c27983fd9cdead084a9ad4e90986dd4467dbc9e5be6c3abeb78866",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "喂——不许偷捏。": {
+      "file": "assets/voice/0a948e276d437cc2.mp3",
+      "durationMs": 1704,
+      "spokenText": "喂，不许偷捏。",
+      "mood": "annoyed_1",
+      "direction": "请用可爱、轻轻嘟嘴、假装生气的撒娇语气说话。",
+      "recipeSha256": "21694cf995c27983fd9cdead084a9ad4e90986dd4467dbc9e5be6c3abeb78866",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我可是会记住的哦。": {
+      "file": "assets/voice/af66de3ac4ca1524.mp3",
+      "durationMs": 1728,
+      "spokenText": "我可是会记住的哦。",
+      "mood": "annoyed_1",
+      "direction": "请用可爱、轻轻嘟嘴、假装生气的撒娇语气说话。",
+      "recipeSha256": "21694cf995c27983fd9cdead084a9ad4e90986dd4467dbc9e5be6c3abeb78866",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "唔，脸颊借用时间到。": {
+      "file": "assets/voice/8910d0f966c2fdd6.mp3",
+      "durationMs": 2256,
+      "spokenText": "唔，脸颊借用时间到。",
+      "mood": "annoyed_1",
+      "direction": "请用可爱、轻轻嘟嘴、假装生气的撒娇语气说话。",
+      "recipeSha256": "21694cf995c27983fd9cdead084a9ad4e90986dd4467dbc9e5be6c3abeb78866",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "还给我嘛。": {
+      "file": "assets/voice/dd2fb347d7b6f582.mp3",
+      "durationMs": 984,
+      "spokenText": "还给我嘛。",
+      "mood": "annoyed_1",
+      "direction": "请用可爱、轻轻嘟嘴、假装生气的撒娇语气说话。",
+      "recipeSha256": "21694cf995c27983fd9cdead084a9ad4e90986dd4467dbc9e5be6c3abeb78866",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "怎么又捏嘛……( •̀ - •́ )": {
+      "file": "assets/voice/b53cde694defb531.mp3",
+      "durationMs": 1272,
+      "spokenText": "怎么又捏嘛。",
+      "mood": "annoyed_2",
+      "direction": "请用气鼓鼓又舍不得凶人的语气说话，有一点委屈，娇嗔地撒娇抗议。",
+      "recipeSha256": "5d2011027a820ef9dc2c12affafe4e896119f03fe22e9a9f1a55132d52ffe44f",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "已经有一点点生气了。": {
+      "file": "assets/voice/3cab3d321dc5a0d4.mp3",
+      "durationMs": 2088,
+      "spokenText": "已经有一点点生气了。",
+      "mood": "annoyed_2",
+      "direction": "请用气鼓鼓又舍不得凶人的语气说话，有一点委屈，娇嗔地撒娇抗议。",
+      "recipeSha256": "5d2011027a820ef9dc2c12affafe4e896119f03fe22e9a9f1a55132d52ffe44f",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "哼，第二下了哦。": {
+      "file": "assets/voice/cf517fc19cc2bc6a.mp3",
+      "durationMs": 2160,
+      "spokenText": "哼，第二下了哦。",
+      "mood": "annoyed_2",
+      "direction": "请用气鼓鼓又舍不得凶人的语气说话，有一点委屈，娇嗔地撒娇抗议。",
+      "recipeSha256": "5d2011027a820ef9dc2c12affafe4e896119f03fe22e9a9f1a55132d52ffe44f",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "眉毛都皱起来啦。": {
+      "file": "assets/voice/d77e373bb4744c89.mp3",
+      "durationMs": 2016,
+      "spokenText": "眉毛都皱起来啦。",
+      "mood": "annoyed_2",
+      "direction": "请用气鼓鼓又舍不得凶人的语气说话，有一点委屈，娇嗔地撒娇抗议。",
+      "recipeSha256": "5d2011027a820ef9dc2c12affafe4e896119f03fe22e9a9f1a55132d52ffe44f",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "脸颊酸酸的……": {
+      "file": "assets/voice/de69d04dac582bac.mp3",
+      "durationMs": 1680,
+      "spokenText": "脸颊酸酸的。",
+      "mood": "annoyed_2",
+      "direction": "请用气鼓鼓又舍不得凶人的语气说话，有一点委屈，娇嗔地撒娇抗议。",
+      "recipeSha256": "5d2011027a820ef9dc2c12affafe4e896119f03fe22e9a9f1a55132d52ffe44f",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "换成摸摸头好不好。": {
+      "file": "assets/voice/c1da47eacf751b5b.mp3",
+      "durationMs": 1632,
+      "spokenText": "换成摸摸头好不好。",
+      "mood": "annoyed_2",
+      "direction": "请用气鼓鼓又舍不得凶人的语气说话，有一点委屈，娇嗔地撒娇抗议。",
+      "recipeSha256": "5d2011027a820ef9dc2c12affafe4e896119f03fe22e9a9f1a55132d52ffe44f",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我有在认真瞪你。": {
+      "file": "assets/voice/4ec5d9b3e6b2803e.mp3",
+      "durationMs": 1488,
+      "spokenText": "我有在认真瞪你。",
+      "mood": "annoyed_2",
+      "direction": "请用气鼓鼓又舍不得凶人的语气说话，有一点委屈，娇嗔地撒娇抗议。",
+      "recipeSha256": "5d2011027a820ef9dc2c12affafe4e896119f03fe22e9a9f1a55132d52ffe44f",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "眼睛湿湿的也算！": {
+      "file": "assets/voice/0d6610f5b2fa5f75.mp3",
+      "durationMs": 2160,
+      "spokenText": "眼睛湿湿的也算！",
+      "mood": "annoyed_2",
+      "direction": "请用气鼓鼓又舍不得凶人的语气说话，有一点委屈，娇嗔地撒娇抗议。",
+      "recipeSha256": "5d2011027a820ef9dc2c12affafe4e896119f03fe22e9a9f1a55132d52ffe44f",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "再捏就、就真的哭了哦……": {
+      "file": "assets/voice/4ebbd7f267b739f9.mp3",
+      "durationMs": 3120,
+      "spokenText": "再捏就、就真的哭了哦。",
+      "mood": "annoyed_3",
+      "direction": "请用快要哭出来的委屈语气说话，声音软软轻颤，一边瘪嘴一边撒娇。",
+      "recipeSha256": "6068334c84e4125b4e828ef76d004b3c6ee5587340d808969381e781f9fe6413",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "眼泪已经快藏不住了。": {
+      "file": "assets/voice/9d4b0f61bf3e21d5.mp3",
+      "durationMs": 2136,
+      "spokenText": "眼泪已经快藏不住了。",
+      "mood": "annoyed_3",
+      "direction": "请用快要哭出来的委屈语气说话，声音软软轻颤，一边瘪嘴一边撒娇。",
+      "recipeSha256": "6068334c84e4125b4e828ef76d004b3c6ee5587340d808969381e781f9fe6413",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "呜，第三下了……(｡•́︿•̀｡)": {
+      "file": "assets/voice/17152b25c8bee9b1.mp3",
+      "durationMs": 2760,
+      "spokenText": "呜，第三下了。",
+      "mood": "annoyed_3",
+      "direction": "请用快要哭出来的委屈语气说话，声音软软轻颤，一边瘪嘴一边撒娇。",
+      "recipeSha256": "6068334c84e4125b4e828ef76d004b3c6ee5587340d808969381e781f9fe6413",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "小鲸鱼要躲回海里了……": {
+      "file": "assets/voice/5eb0624b9550fe50.mp3",
+      "durationMs": 2256,
+      "spokenText": "小鲸鱼要躲回海里了。",
+      "mood": "annoyed_3",
+      "direction": "请用快要哭出来的委屈语气说话，声音软软轻颤，一边瘪嘴一边撒娇。",
+      "recipeSha256": "6068334c84e4125b4e828ef76d004b3c6ee5587340d808969381e781f9fe6413",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "哼……不许笑。": {
+      "file": "assets/voice/eb6ba08aa0398211.mp3",
+      "durationMs": 1920,
+      "spokenText": "哼，不许笑。",
+      "mood": "annoyed_3",
+      "direction": "请用快要哭出来的委屈语气说话，声音软软轻颤，一边瘪嘴一边撒娇。",
+      "recipeSha256": "6068334c84e4125b4e828ef76d004b3c6ee5587340d808969381e781f9fe6413",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "只是眼睛起雾了。": {
+      "file": "assets/voice/37d1850fe8ba3488.mp3",
+      "durationMs": 1920,
+      "spokenText": "只是眼睛起雾了。",
+      "mood": "annoyed_3",
+      "direction": "请用快要哭出来的委屈语气说话，声音软软轻颤，一边瘪嘴一边撒娇。",
+      "recipeSha256": "6068334c84e4125b4e828ef76d004b3c6ee5587340d808969381e781f9fe6413",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "嘴巴要瘪下去了……": {
+      "file": "assets/voice/778ab43c4b007618.mp3",
+      "durationMs": 1920,
+      "spokenText": "嘴巴要瘪下去了。",
+      "mood": "annoyed_3",
+      "direction": "请用快要哭出来的委屈语气说话，声音软软轻颤，一边瘪嘴一边撒娇。",
+      "recipeSha256": "6068334c84e4125b4e828ef76d004b3c6ee5587340d808969381e781f9fe6413",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "摸摸头嘛，轻轻的那种。": {
+      "file": "assets/voice/091473589d1f1e24.mp3",
+      "durationMs": 3168,
+      "spokenText": "摸摸头嘛，轻轻的那种。",
+      "mood": "annoyed_3",
+      "direction": "请用快要哭出来的委屈语气说话，声音软软轻颤，一边瘪嘴一边撒娇。",
+      "recipeSha256": "6068334c84e4125b4e828ef76d004b3c6ee5587340d808969381e781f9fe6413",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "探头——(｡･ω･｡)ﾉ": {
+      "file": "assets/voice/232e893efd361bf2.mp3",
+      "durationMs": 600,
+      "spokenText": "探头。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "没什么事，就是看看你。": {
+      "file": "assets/voice/78341eee133fbf5d.mp3",
+      "durationMs": 2136,
+      "spokenText": "没什么事，就是看看你。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "刚刚有一粒灰尘飘过去。": {
+      "file": "assets/voice/3d3026fc608c4cde.mp3",
+      "durationMs": 2496,
+      "spokenText": "刚刚有一粒灰尘飘过去。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我盯着它看了好久……": {
+      "file": "assets/voice/e0812c44c47596a8.mp3",
+      "durationMs": 2112,
+      "spokenText": "我盯着它看了好久。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "你忙，我在旁边待机。": {
+      "file": "assets/voice/023215c769e16f72.mp3",
+      "durationMs": 1968,
+      "spokenText": "你忙，我在旁边待机。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "绝对没有偷偷打哈欠。": {
+      "file": "assets/voice/6fd3eb310c09df09.mp3",
+      "durationMs": 2784,
+      "spokenText": "绝对没有偷偷打哈欠。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "今天的发呆名额，还剩一点。": {
+      "file": "assets/voice/bb6f42064a0e4a65.mp3",
+      "durationMs": 2568,
+      "spokenText": "今天的发呆名额，还剩一点。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "分你一半？": {
+      "file": "assets/voice/b3e7337d7716763a.mp3",
+      "durationMs": 1128,
+      "spokenText": "分你一半？",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "嗯？叫我了吗？": {
+      "file": "assets/voice/0c62d32e627e355f.mp3",
+      "durationMs": 2184,
+      "spokenText": "嗯？叫我了吗？",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "……哦，是我自己听错了 (〃ω〃)": {
+      "file": "assets/voice/330cad0a0ae903b7.mp3",
+      "durationMs": 3048,
+      "spokenText": "哦，是我自己听错了",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "偷偷伸个懒腰——": {
+      "file": "assets/voice/d5f684dbacdadfaa.mp3",
+      "durationMs": 1704,
+      "spokenText": "偷偷伸个懒腰。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "好，继续坐得端端正正。": {
+      "file": "assets/voice/474798c942423a35.mp3",
+      "durationMs": 2784,
+      "spokenText": "好，继续坐得端端正正。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "这会儿好安静。": {
+      "file": "assets/voice/192d2d337aa3bf29.mp3",
+      "durationMs": 1536,
+      "spokenText": "这会儿好安静。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "连呆毛都开始犯困了。": {
+      "file": "assets/voice/06c71cf7905a2d00.mp3",
+      "durationMs": 2304,
+      "spokenText": "连呆毛都开始犯困了。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "小鲸鱼浮上来换口气。": {
+      "file": "assets/voice/31eb595f3c840ab6.mp3",
+      "durationMs": 2448,
+      "spokenText": "小鲸鱼浮上来换口气。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "噗噜噗噜～": {
+      "file": "assets/voice/50f6ad50aab447f6.mp3",
+      "durationMs": 816,
+      "spokenText": "噗噜噗噜。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "鼠标又从那边跑过去了。": {
+      "file": "assets/voice/0aa0e3ae58b835ac.mp3",
+      "durationMs": 2328,
+      "spokenText": "鼠标又从那边跑过去了。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "它是不是也有事情要忙呀？": {
+      "file": "assets/voice/4806d3442fcccb37.mp3",
+      "durationMs": 2496,
+      "spokenText": "它是不是也有事情要忙呀？",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "想说点什么来着……": {
+      "file": "assets/voice/112bf4ad1bdf7515.mp3",
+      "durationMs": 1776,
+      "spokenText": "想说点什么来着。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "完了，被发呆吃掉了。": {
+      "file": "assets/voice/14f65ecc804448b5.mp3",
+      "durationMs": 2808,
+      "spokenText": "完了，被发呆吃掉了。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我就坐这儿，不乱跑。": {
+      "file": "assets/voice/67d6cc00ba2e0f10.mp3",
+      "durationMs": 1968,
+      "spokenText": "我就坐这儿，不乱跑。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "……脚尖可以晃一下吧？": {
+      "file": "assets/voice/f1592985af4193eb.mp3",
+      "durationMs": 2040,
+      "spokenText": "脚尖可以晃一下吧？",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "小声打个招呼：嗨。": {
+      "file": "assets/voice/251dcfbfc6db4c07.mp3",
+      "durationMs": 2136,
+      "spokenText": "小声打个招呼：嗨。",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "大声的就留到下次啦 (•̀ᴗ•́)و": {
+      "file": "assets/voice/22c0ce625858d5f5.mp3",
+      "durationMs": 2496,
+      "spokenText": "大声的就留到下次啦",
+      "mood": "idle",
+      "direction": "请用软萌、俏皮的撒娇语气说话，像贴在身边轻声聊天，尾音柔软上扬。",
+      "recipeSha256": "bad5f5a93dcfc788fce82f3ea9d991fc3476c79400062786fc65d51e24111c07",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "再看一页……就一页！": {
+      "file": "assets/voice/dd40f45cfc4939f7.mp3",
+      "durationMs": 2016,
+      "spokenText": "再看一页，就一页！",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "欸，怎么已经翻到下一章了。": {
+      "file": "assets/voice/2e0fb89aea1f97a3.mp3",
+      "durationMs": 3120,
+      "spokenText": "欸，怎么已经翻到下一章了。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "等、等一下，这里我好像懂了！": {
+      "file": "assets/voice/48087a59a9a2d7c6.mp3",
+      "durationMs": 3264,
+      "spokenText": "等、等一下，这里我好像懂了！",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "先记下来，免得它跑掉。": {
+      "file": "assets/voice/ac6dfb8c4398bee7.mp3",
+      "durationMs": 2304,
+      "spokenText": "先记下来，免得它跑掉。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "这句话看了三遍。": {
+      "file": "assets/voice/9c47e72cb0031b0f.mp3",
+      "durationMs": 1632,
+      "spokenText": "这句话看了三遍。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "第四遍……应该就熟了吧 (｡•́︿•̀｡)": {
+      "file": "assets/voice/8cc4adcb7d2e38f5.mp3",
+      "durationMs": 2592,
+      "spokenText": "第四遍，应该就熟了吧",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "书签夹好，坐姿端正。": {
+      "file": "assets/voice/1da761c213d8a3b6.mp3",
+      "durationMs": 2280,
+      "spokenText": "书签夹好，坐姿端正。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "小老师开始上课——先教我自己。": {
+      "file": "assets/voice/594532a23f983e12.mp3",
+      "durationMs": 3024,
+      "spokenText": "小老师开始上课，先教我自己。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "嘘，我在和这道题对视。": {
+      "file": "assets/voice/8fdc46ca076b37c5.mp3",
+      "durationMs": 2784,
+      "spokenText": "嘘，我在和这道题对视。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "它还没有先眨眼。": {
+      "file": "assets/voice/7dbccd3754ec4e38.mp3",
+      "durationMs": 1512,
+      "spokenText": "它还没有先眨眼。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "这段有点绕……": {
+      "file": "assets/voice/580226d7928c90de.mp3",
+      "durationMs": 1680,
+      "spokenText": "这段有点绕。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我把它拆成小块吃掉，啊不是，读掉。": {
+      "file": "assets/voice/3efe78c664baa2e6.mp3",
+      "durationMs": 4224,
+      "spokenText": "我把它拆成小块吃掉，啊不是，读掉。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "刚刚那行很重要！": {
+      "file": "assets/voice/43af84910b1c2a49.mp3",
+      "durationMs": 1440,
+      "spokenText": "刚刚那行很重要！",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "偷偷画一颗小星星。": {
+      "file": "assets/voice/73f9e9265d1dc184.mp3",
+      "durationMs": 1680,
+      "spokenText": "偷偷画一颗小星星。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "先别告诉我答案。": {
+      "file": "assets/voice/72e8c11bb56c41ef.mp3",
+      "durationMs": 1560,
+      "spokenText": "先别告诉我答案。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "让我再想一下下 (ง •̀_•́)ง": {
+      "file": "assets/voice/a3ae531486af4812.mp3",
+      "durationMs": 1512,
+      "spokenText": "让我再想一下下",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "翻页，沙啦——": {
+      "file": "assets/voice/893ce7bb8effd12e.mp3",
+      "durationMs": 1992,
+      "spokenText": "翻页，沙啦。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "这个声音有点好听。": {
+      "file": "assets/voice/daf395e084ee7564.mp3",
+      "durationMs": 3024,
+      "spokenText": "这个声音有点好听。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "这几个字怎么越看越陌生……": {
+      "file": "assets/voice/e12b93960128920d.mp3",
+      "durationMs": 3192,
+      "spokenText": "这几个字怎么越看越陌生。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "眨眨眼，再认一次。": {
+      "file": "assets/voice/55e55b13c3014db0.mp3",
+      "durationMs": 2280,
+      "spokenText": "眨眨眼，再认一次。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我没有走神。": {
+      "file": "assets/voice/95e62385f0ca6abd.mp3",
+      "durationMs": 1032,
+      "spokenText": "我没有走神。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "只是脑袋正在慢慢转圈。": {
+      "file": "assets/voice/a53a2f81b6e83110.mp3",
+      "durationMs": 1944,
+      "spokenText": "只是脑袋正在慢慢转圈。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "读到有意思的地方了！": {
+      "file": "assets/voice/302e59198188cc57.mp3",
+      "durationMs": 1560,
+      "spokenText": "读到有意思的地方了！",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "等我看完这一小段，再跟你说。": {
+      "file": "assets/voice/80671af9ea824778.mp3",
+      "durationMs": 2208,
+      "spokenText": "等我看完这一小段，再跟你说。",
+      "mood": "study",
+      "direction": "请用轻声、认真又可爱的语气说话，像一边看书一边小声嘟囔，语气软软的。",
+      "recipeSha256": "16d220b8caf9c460dc70198d343e9afdbefc5528e076f5c24e6da38058031372",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "这段好听，耳朵不想下班了 ♪": {
+      "file": "assets/voice/3f940c52cefc634e.mp3",
+      "durationMs": 2352,
+      "spokenText": "这段好听，耳朵不想下班了",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "再偷偷点两下头。": {
+      "file": "assets/voice/50246e6227405408.mp3",
+      "durationMs": 1656,
+      "spokenText": "再偷偷点两下头。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "哼哼～哼哼哼～": {
+      "file": "assets/voice/5ffab9d38dba6486.mp3",
+      "durationMs": 1224,
+      "spokenText": "哼哼，哼哼哼。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "歌词忘了，气势不能输。": {
+      "file": "assets/voice/9e02e429471c0af4.mp3",
+      "durationMs": 2304,
+      "spokenText": "歌词忘了，气势不能输。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "呆毛好像先跟上节拍了。": {
+      "file": "assets/voice/cb660d2046f2f155.mp3",
+      "durationMs": 2088,
+      "spokenText": "呆毛好像先跟上节拍了。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我也来——♪": {
+      "file": "assets/voice/c647989373eff2e2.mp3",
+      "durationMs": 912,
+      "spokenText": "我也来。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "这一段可以偷偷摇一下。": {
+      "file": "assets/voice/11da344115ccf5af.mp3",
+      "durationMs": 2088,
+      "spokenText": "这一段可以偷偷摇一下。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "幅度很小的那种 (´▽`ʃ♡ƪ)": {
+      "file": "assets/voice/8ee9669ab901bc95.mp3",
+      "durationMs": 1416,
+      "spokenText": "幅度很小的那种",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "耳朵：还要听。": {
+      "file": "assets/voice/b51b60e32c008c0f.mp3",
+      "durationMs": 1104,
+      "spokenText": "耳朵：还要听。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "脑袋：收到，开始晃。": {
+      "file": "assets/voice/b6fb35c858e3c887.mp3",
+      "durationMs": 2232,
+      "spokenText": "脑袋：收到，开始晃。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "刚刚那个音，好喜欢。": {
+      "file": "assets/voice/4ca368985d42e31a.mp3",
+      "durationMs": 2400,
+      "spokenText": "刚刚那个音，好喜欢。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "感觉心里亮了一颗小星星。": {
+      "file": "assets/voice/801af88e5aead54a.mp3",
+      "durationMs": 2280,
+      "spokenText": "感觉心里亮了一颗小星星。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我才没有在开小型演唱会。": {
+      "file": "assets/voice/0cab65521d087042.mp3",
+      "durationMs": 2232,
+      "spokenText": "我才没有在开小型演唱会。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "……观众只有你一个也算吗？": {
+      "file": "assets/voice/cd4757a667aa95cc.mp3",
+      "durationMs": 1896,
+      "spokenText": "观众只有你一个也算吗？",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "闭上眼听一小会儿。": {
+      "file": "assets/voice/b7cf26ee70649ecd.mp3",
+      "durationMs": 2088,
+      "spokenText": "闭上眼听一小会儿。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "嗯，这样也很好听。": {
+      "file": "assets/voice/31817fd339c12af8.mp3",
+      "durationMs": 1920,
+      "spokenText": "嗯，这样也很好听。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "跟着哼了半天，调跑走了。": {
+      "file": "assets/voice/777f3a5c025999d0.mp3",
+      "durationMs": 2616,
+      "spokenText": "跟着哼了半天，调跑走了。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "先假装它没跑远 (￣▽￣)": {
+      "file": "assets/voice/b58c7d82e81cf2af.mp3",
+      "durationMs": 1704,
+      "spokenText": "先假装它没跑远",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "嘘，让这一小段先唱完。": {
+      "file": "assets/voice/2fadb779fb595da4.mp3",
+      "durationMs": 2424,
+      "spokenText": "嘘，让这一小段先唱完。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我还没听够呢。": {
+      "file": "assets/voice/80ce578a3e537b08.mp3",
+      "durationMs": 1392,
+      "spokenText": "我还没听够呢。",
+      "mood": "listening",
+      "direction": "请用开心、陶醉、轻快可爱的语气说话，声音含笑，像跟着音乐轻轻摇晃。",
+      "recipeSha256": "13773eef3f19ec5625d0e7264fdd66177aa7a6d135c3782ca920489720923d54",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "唔……手心暖暖的。": {
+      "file": "assets/voice/c883b6a537fe98f4.mp3",
+      "durationMs": 3456,
+      "spokenText": "唔，手心暖暖的。",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "呆毛会被摸平啦 (〃ω〃)": {
+      "file": "assets/voice/e23b542252973add.mp3",
+      "durationMs": 1728,
+      "spokenText": "呆毛会被摸平啦",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "往这边一点点……对。": {
+      "file": "assets/voice/9e79f7a7507b2a22.mp3",
+      "durationMs": 2520,
+      "spokenText": "往这边一点点，对。",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "嗯，舒服。": {
+      "file": "assets/voice/6e760bb810df128c.mp3",
+      "durationMs": 2664,
+      "spokenText": "嗯，舒服。",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我没有自己凑过去！": {
+      "file": "assets/voice/185a28de3db8be3e.mp3",
+      "durationMs": 1800,
+      "spokenText": "我没有自己凑过去！",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "是脑袋自己动的。": {
+      "file": "assets/voice/2f16d5f8d41498ac.mp3",
+      "durationMs": 2280,
+      "spokenText": "是脑袋自己动的。",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "摸摸电量：正在充电。": {
+      "file": "assets/voice/3b999ece66d1d1d5.mp3",
+      "durationMs": 3384,
+      "spokenText": "摸摸电量：正在充电。",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "再充一小格就好。": {
+      "file": "assets/voice/42f48eeee4a17e8a.mp3",
+      "durationMs": 1704,
+      "spokenText": "再充一小格就好。",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "噗噜……冒个小泡泡。": {
+      "file": "assets/voice/31ec14b7cf86efd7.mp3",
+      "durationMs": 3216,
+      "spokenText": "噗噜，冒个小泡泡。",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "小鲸鱼偷偷凑近一点。": {
+      "file": "assets/voice/e9063ca12662b2ab.mp3",
+      "durationMs": 2520,
+      "spokenText": "小鲸鱼偷偷凑近一点。",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "头发乱一点也没关系。": {
+      "file": "assets/voice/d52c96f25da58059.mp3",
+      "durationMs": 2664,
+      "spokenText": "头发乱一点也没关系。",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "等会儿再慢慢整理。": {
+      "file": "assets/voice/53d958f96390fd55.mp3",
+      "durationMs": 1776,
+      "spokenText": "等会儿再慢慢整理。",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "被摸到忘记刚才想说什么了。": {
+      "file": "assets/voice/1ab621c682cd2af2.mp3",
+      "durationMs": 2736,
+      "spokenText": "被摸到忘记刚才想说什么了。",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "……那就再摸一下？": {
+      "file": "assets/voice/a96c07e678fed006.mp3",
+      "durationMs": 1872,
+      "spokenText": "那就再摸一下？",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "嗯——(´꒳`)": {
+      "file": "assets/voice/57aa925d38ad51a3.mp3",
+      "durationMs": 840,
+      "spokenText": "嗯。",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "现在不想把脑袋挪开。": {
+      "file": "assets/voice/2bda3286eccc23a0.mp3",
+      "durationMs": 2232,
+      "spokenText": "现在不想把脑袋挪开。",
+      "mood": "petting",
+      "direction": "请用很享受、害羞、软软撒娇的语气说话，声音轻柔带笑，尾音慢慢拖长。",
+      "recipeSha256": "d3bd37abc604b9ff0fc20468cdc039ef4838b518a518b68fdb99c1a2f1549b34",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "呜……慢慢摸就好。": {
+      "file": "assets/voice/f1fa35ca6edc04d2.mp3",
+      "durationMs": 3144,
+      "spokenText": "呜，慢慢摸就好。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我先把眼泪收一收。": {
+      "file": "assets/voice/5ee0f8efacb8b24b.mp3",
+      "durationMs": 2280,
+      "spokenText": "我先把眼泪收一收。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "好啦……不瘪嘴了。": {
+      "file": "assets/voice/9ec6197ddea4fe6f.mp3",
+      "durationMs": 2232,
+      "spokenText": "好啦，不瘪嘴了。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "刚刚真的有一点委屈。": {
+      "file": "assets/voice/43c1f01935db9e09.mp3",
+      "durationMs": 2688,
+      "spokenText": "刚刚真的有一点委屈。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "吸吸鼻子。": {
+      "file": "assets/voice/60d05e03ebb66ed0.mp3",
+      "durationMs": 1080,
+      "spokenText": "吸吸鼻子。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "嗯，已经好一点了。": {
+      "file": "assets/voice/10fa09c3f8ba6bfa.mp3",
+      "durationMs": 2856,
+      "spokenText": "嗯，已经好一点了。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "手心借我靠一下。": {
+      "file": "assets/voice/5c301093fbfc8558.mp3",
+      "durationMs": 2088,
+      "spokenText": "手心借我靠一下。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "就这样，小小的一下。": {
+      "file": "assets/voice/656419224e2a683c.mp3",
+      "durationMs": 2856,
+      "spokenText": "就这样，小小的一下。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "眼泪有点不听话 (｡•́︿•̀｡)": {
+      "file": "assets/voice/16fcb98ffccca479.mp3",
+      "durationMs": 2232,
+      "spokenText": "眼泪有点不听话",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我在努力把它们憋回去。": {
+      "file": "assets/voice/9c55e741c9ded530.mp3",
+      "durationMs": 2400,
+      "spokenText": "我在努力把它们憋回去。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "听见啦，轻轻的就好。": {
+      "file": "assets/voice/d4cdb8edbecf1750.mp3",
+      "durationMs": 2448,
+      "spokenText": "听见啦，轻轻的就好。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "呆毛也慢慢放松了。": {
+      "file": "assets/voice/268f541630385bf0.mp3",
+      "durationMs": 2112,
+      "spokenText": "呆毛也慢慢放松了。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "唔……这次不躲。": {
+      "file": "assets/voice/7469ec260d4324ea.mp3",
+      "durationMs": 3120,
+      "spokenText": "唔，这次不躲。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "让我缓一小会儿。": {
+      "file": "assets/voice/186c766304a03388.mp3",
+      "durationMs": 1824,
+      "spokenText": "让我缓一小会儿。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "鼻尖还是酸酸的。": {
+      "file": "assets/voice/70a8d7a4c648046e.mp3",
+      "durationMs": 1704,
+      "spokenText": "鼻尖还是酸酸的。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "不过已经没有刚刚那么难过了。": {
+      "file": "assets/voice/2e6271e2d6d4b01e.mp3",
+      "durationMs": 2904,
+      "spokenText": "不过已经没有刚刚那么难过了。",
+      "mood": "comfort",
+      "direction": "请用刚哭过、正被安慰的软软语气说话，带一点鼻音，逐渐放松，依赖地撒娇。",
+      "recipeSha256": "56ce5e2b2f87c7487bb0db386c9da0e11116c2765673671ca3e3050e1970e38e",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "呜哇，小鲸鱼要被捏扁啦！": {
+      "file": "assets/voice/8dc29d57090a743d.mp3",
+      "durationMs": 3216,
+      "spokenText": "呜哇，小鲸鱼要被捏扁啦！",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "轻、轻一点 (＞﹏＜)": {
+      "file": "assets/voice/b4dcaa375d30235d.mp3",
+      "durationMs": 1536,
+      "spokenText": "轻、轻一点",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "鲸鱼脸颊不可以拉长啦！": {
+      "file": "assets/voice/720eba17874d9f2b.mp3",
+      "durationMs": 2232,
+      "spokenText": "鲸鱼脸颊不可以拉长啦！",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "要拍小浪花抗议了哦。": {
+      "file": "assets/voice/d81a00d8a24fd2f7.mp3",
+      "durationMs": 1896,
+      "spokenText": "要拍小浪花抗议了哦。",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "等一下，话都说不圆了……": {
+      "file": "assets/voice/35085670d55824d4.mp3",
+      "durationMs": 2016,
+      "spokenText": "等一下，话都说不圆了。",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "呜咕。": {
+      "file": "assets/voice/fadf6d5c8f0aff45.mp3",
+      "durationMs": 864,
+      "spokenText": "呜咕。",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "脸颊要申请休息！": {
+      "file": "assets/voice/7c2f9b245db11c47.mp3",
+      "durationMs": 1416,
+      "spokenText": "脸颊要申请休息！",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "批准一下嘛。": {
+      "file": "assets/voice/ea8fd6daaac975ff.mp3",
+      "durationMs": 1224,
+      "spokenText": "批准一下嘛。",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "这是脸，不是解压玩具！": {
+      "file": "assets/voice/bb2e29a745da0dcf.mp3",
+      "durationMs": 1992,
+      "spokenText": "这是脸，不是解压玩具！",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "……不要笑啦 (｡•́︿•̀｡)": {
+      "file": "assets/voice/70e7c59d9a44379a.mp3",
+      "durationMs": 1464,
+      "spokenText": "不要笑啦",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "啾——": {
+      "file": "assets/voice/6c5f38c3f3d134dc.mp3",
+      "durationMs": 624,
+      "spokenText": "啾。",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "刚刚那声不算，是被捏出来的。": {
+      "file": "assets/voice/68e7a72e88e978fc.mp3",
+      "durationMs": 2760,
+      "spokenText": "刚刚那声不算，是被捏出来的。",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "松一点点，好不好？": {
+      "file": "assets/voice/b8e2b73ab9aed745.mp3",
+      "durationMs": 2832,
+      "spokenText": "松一点点，好不好？",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "眼泪都快被挤出来了。": {
+      "file": "assets/voice/3e7f7d18d45fc2ce.mp3",
+      "durationMs": 2088,
+      "spokenText": "眼泪都快被挤出来了。",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "呜，我有认真抗议。": {
+      "file": "assets/voice/52ad0c42777a6fdb.mp3",
+      "durationMs": 3432,
+      "spokenText": "呜，我有认真抗议。",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "虽然现在看起来不太凶。": {
+      "file": "assets/voice/a35e8ec8b737343b.mp3",
+      "durationMs": 2352,
+      "spokenText": "虽然现在看起来不太凶。",
+      "mood": "pinching",
+      "direction": "请用被捏脸时惊讶又委屈的娇嗔语气说话，软萌地撒娇抗议，轻声央求。",
+      "recipeSha256": "395546471de595c45eb6b65856aadedf7b1cb39c8177892ed7255f3b7a68aca8",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "呜……脸颊都捏酸了。": {
+      "file": "assets/voice/6fa05a7e677c2d6d.mp3",
+      "durationMs": 4104,
+      "spokenText": "呜，脸颊都捏酸了。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "先不捏了，好不好。": {
+      "file": "assets/voice/9eae130ebb11d4da.mp3",
+      "durationMs": 2400,
+      "spokenText": "先不捏了，好不好。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我、我才没哭。": {
+      "file": "assets/voice/ba34a9ae87c5d5fd.mp3",
+      "durationMs": 3096,
+      "spokenText": "我、我才没哭。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "……好吧，哭了一点点 (っ˘̩╭╮˘̩)っ": {
+      "file": "assets/voice/f8c7444d9a892e3b.mp3",
+      "durationMs": 3216,
+      "spokenText": "好吧，哭了一点点",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "小鲸鱼生气了。": {
+      "file": "assets/voice/1178053bdbba7984.mp3",
+      "durationMs": 2736,
+      "spokenText": "小鲸鱼生气了。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "可是眼泪先跑出来了……": {
+      "file": "assets/voice/85427a8cbacee9f8.mp3",
+      "durationMs": 3504,
+      "spokenText": "可是眼泪先跑出来了。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "鼻子酸酸的，哼。": {
+      "file": "assets/voice/6e2a91906fcdd6d8.mp3",
+      "durationMs": 2952,
+      "spokenText": "鼻子酸酸的，哼。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "要轻轻摸摸头才行。": {
+      "file": "assets/voice/a22ef2944a9311d2.mp3",
+      "durationMs": 2664,
+      "spokenText": "要轻轻摸摸头才行。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "刚刚那一下不算轻啦。": {
+      "file": "assets/voice/87613a29e159f3f4.mp3",
+      "durationMs": 3456,
+      "spokenText": "刚刚那一下不算轻啦。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "脸颊还在闹别扭。": {
+      "file": "assets/voice/06a9075aa3274df0.mp3",
+      "durationMs": 4464,
+      "spokenText": "脸颊还在闹别扭。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "呜，眼睛起雾了。": {
+      "file": "assets/voice/016bf1314d540cac.mp3",
+      "durationMs": 4056,
+      "spokenText": "呜，眼睛起雾了。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "等我眨掉一点点。": {
+      "file": "assets/voice/7c997e1b621b1a72.mp3",
+      "durationMs": 2592,
+      "spokenText": "等我眨掉一点点。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "现在只想靠岸。": {
+      "file": "assets/voice/c6cd34190d1fb7f0.mp3",
+      "durationMs": 2280,
+      "spokenText": "现在只想靠岸。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "当一只被摸摸头的小鲸鱼。": {
+      "file": "assets/voice/6bc411abcb4de33d.mp3",
+      "durationMs": 3168,
+      "spokenText": "当一只被摸摸头的小鲸鱼。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我先小声哭一会儿。": {
+      "file": "assets/voice/9bccd92088b09125.mp3",
+      "durationMs": 3312,
+      "spokenText": "我先小声哭一会儿。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "可以摸摸头吗……": {
+      "file": "assets/voice/51542b9a87685696.mp3",
+      "durationMs": 1800,
+      "spokenText": "可以摸摸头吗。",
+      "mood": "crying",
+      "direction": "请用带哭腔的委屈语气说话，小声抽泣，声音软软发颤，像在撒娇求安慰。",
+      "recipeSha256": "36a5d1058f8763eccfd5fb9b18132662839d65d35044a24563b3e1c8639c9099",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "手已经伸出来了……": {
+      "file": "assets/voice/83368767e1e83dcf.mp3",
+      "durationMs": 1872,
+      "spokenText": "手已经伸出来了。",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "抱一下嘛 (つ´ω`)つ": {
+      "file": "assets/voice/2530c77f3e80e2c3.mp3",
+      "durationMs": 1392,
+      "spokenText": "抱一下嘛",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "这里有一只等抱的小鲸鱼。": {
+      "file": "assets/voice/badb2667024ea01d.mp3",
+      "durationMs": 3384,
+      "spokenText": "这里有一只等抱的小鲸鱼。",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "请轻轻捞起来。": {
+      "file": "assets/voice/c8a2947cb3a03e7b.mp3",
+      "durationMs": 1704,
+      "spokenText": "请轻轻捞起来。",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "刚刚的话忘记说完了。": {
+      "file": "assets/voice/b0bc7239895157c0.mp3",
+      "durationMs": 2376,
+      "spokenText": "刚刚的话忘记说完了。",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "可以抱抱我吗？": {
+      "file": "assets/voice/52f965eda5500c98.mp3",
+      "durationMs": 1992,
+      "spokenText": "可以抱抱我吗？",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "要一个不太用力的抱抱。": {
+      "file": "assets/voice/30bd58c97e97d58d.mp3",
+      "durationMs": 3720,
+      "spokenText": "要一个不太用力的抱抱。",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "软软的那种。": {
+      "file": "assets/voice/f9f4ef8e88f1757e.mp3",
+      "durationMs": 1488,
+      "spokenText": "软软的那种。",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "袖子都准备好了。": {
+      "file": "assets/voice/e35ddf219d48855d.mp3",
+      "durationMs": 1488,
+      "spokenText": "袖子都准备好了。",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "就差你的抱抱啦。": {
+      "file": "assets/voice/59f801d2861e4bcf.mp3",
+      "durationMs": 1872,
+      "spokenText": "就差你的抱抱啦。",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "伸手——": {
+      "file": "assets/voice/3095f897291b8cd8.mp3",
+      "durationMs": 768,
+      "spokenText": "伸手。",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "这次不是要捏脸哦。": {
+      "file": "assets/voice/eae68efb400c97e9.mp3",
+      "durationMs": 2112,
+      "spokenText": "这次不是要捏脸哦。",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "小声申请一个抱抱。": {
+      "file": "assets/voice/f7a26ff0355cb5b0.mp3",
+      "durationMs": 2112,
+      "spokenText": "小声申请一个抱抱。",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "可以盖章吗 (｡･ω･｡)": {
+      "file": "assets/voice/2b40b048104a5a65.mp3",
+      "durationMs": 1560,
+      "spokenText": "可以盖章吗",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "抱一下就好。": {
+      "file": "assets/voice/7f9b1d511b3dbe09.mp3",
+      "durationMs": 1152,
+      "spokenText": "抱一下就好。",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我会乖乖靠住的。": {
+      "file": "assets/voice/efe371c5d26fd144.mp3",
+      "durationMs": 1512,
+      "spokenText": "我会乖乖靠住的。",
+      "mood": "asking_hug",
+      "direction": "请用委屈巴巴、软糯黏人的撒娇语气说话，轻声央求一个拥抱，尾音轻轻上扬。",
+      "recipeSha256": "3ccec2943ea93d55de679ef6d26926fc1949c96c94e743eaa87b2f377228e51c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "接住啦——(つ´ω`)つ": {
+      "file": "assets/voice/2b614f7aa1cdfb1f.mp3",
+      "durationMs": 696,
+      "spokenText": "接住啦。",
+      "mood": "hugging",
+      "direction": "请用安心、满足、甜甜带笑的撒娇语气说话，像轻轻窝进怀里。",
+      "recipeSha256": "355af63d60b9aa9648f325cc3044689b842544e577ed8d333f2b8041bc0c1f1c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "呼……肩膀慢慢放松了。": {
+      "file": "assets/voice/4d83ae094ff8e6b6.mp3",
+      "durationMs": 3408,
+      "spokenText": "呼，肩膀慢慢放松了。",
+      "mood": "hugging",
+      "direction": "请用安心、满足、甜甜带笑的撒娇语气说话，像轻轻窝进怀里。",
+      "recipeSha256": "355af63d60b9aa9648f325cc3044689b842544e577ed8d333f2b8041bc0c1f1c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "好暖，脑袋空空的。": {
+      "file": "assets/voice/2f46b4b23bf9f0b8.mp3",
+      "durationMs": 3072,
+      "spokenText": "好暖，脑袋空空的。",
+      "mood": "hugging",
+      "direction": "请用安心、满足、甜甜带笑的撒娇语气说话，像轻轻窝进怀里。",
+      "recipeSha256": "355af63d60b9aa9648f325cc3044689b842544e577ed8d333f2b8041bc0c1f1c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "刚刚的委屈，散掉一点啦。": {
+      "file": "assets/voice/73c68fa7f70a5db4.mp3",
+      "durationMs": 2736,
+      "spokenText": "刚刚的委屈，散掉一点啦。",
+      "mood": "hugging",
+      "direction": "请用安心、满足、甜甜带笑的撒娇语气说话，像轻轻窝进怀里。",
+      "recipeSha256": "355af63d60b9aa9648f325cc3044689b842544e577ed8d333f2b8041bc0c1f1c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "嗯，这个抱抱收好。": {
+      "file": "assets/voice/cc90a0a27f108013.mp3",
+      "durationMs": 2280,
+      "spokenText": "嗯，这个抱抱收好。",
+      "mood": "hugging",
+      "direction": "请用安心、满足、甜甜带笑的撒娇语气说话，像轻轻窝进怀里。",
+      "recipeSha256": "355af63d60b9aa9648f325cc3044689b842544e577ed8d333f2b8041bc0c1f1c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "小鲸鱼靠岸成功。": {
+      "file": "assets/voice/2ae6c255f2a54230.mp3",
+      "durationMs": 2016,
+      "spokenText": "小鲸鱼靠岸成功。",
+      "mood": "hugging",
+      "direction": "请用安心、满足、甜甜带笑的撒娇语气说话，像轻轻窝进怀里。",
+      "recipeSha256": "355af63d60b9aa9648f325cc3044689b842544e577ed8d333f2b8041bc0c1f1c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "让我再窝一小会儿。": {
+      "file": "assets/voice/7270820542a7172b.mp3",
+      "durationMs": 1584,
+      "spokenText": "让我再窝一小会儿。",
+      "mood": "hugging",
+      "direction": "请用安心、满足、甜甜带笑的撒娇语气说话，像轻轻窝进怀里。",
+      "recipeSha256": "355af63d60b9aa9648f325cc3044689b842544e577ed8d333f2b8041bc0c1f1c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "嘿嘿，抱到了。": {
+      "file": "assets/voice/51a0f57472ef3751.mp3",
+      "durationMs": 1704,
+      "spokenText": "嘿嘿，抱到了。",
+      "mood": "hugging",
+      "direction": "请用安心、满足、甜甜带笑的撒娇语气说话，像轻轻窝进怀里。",
+      "recipeSha256": "355af63d60b9aa9648f325cc3044689b842544e577ed8d333f2b8041bc0c1f1c",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "这行字开始晃来晃去了……": {
+      "file": "assets/voice/129969e713647467.mp3",
+      "durationMs": 2520,
+      "spokenText": "这行字开始晃来晃去了。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我眨一下眼睛 (っ﹏-)": {
+      "file": "assets/voice/73ab485044396c9b.mp3",
+      "durationMs": 1464,
+      "spokenText": "我眨一下眼睛",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "脑袋有点冒烟。": {
+      "file": "assets/voice/baaf62dcb3fa02e6.mp3",
+      "durationMs": 1704,
+      "spokenText": "脑袋有点冒烟。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "能摸摸头，帮忙降个温吗？": {
+      "file": "assets/voice/04f3932a79b17a56.mp3",
+      "durationMs": 2760,
+      "spokenText": "能摸摸头，帮忙降个温吗？",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我没有趴下哦。": {
+      "file": "assets/voice/3b36cb066a466d93.mp3",
+      "durationMs": 1488,
+      "spokenText": "我没有趴下哦。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "只是下巴想休息一下。": {
+      "file": "assets/voice/d12bda473cc7ea89.mp3",
+      "durationMs": 1848,
+      "spokenText": "只是下巴想休息一下。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "看到这里，书签先夹好。": {
+      "file": "assets/voice/cdf9e576dfeeabff.mp3",
+      "durationMs": 3720,
+      "spokenText": "看到这里，书签先夹好。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "想抬头看看你。": {
+      "file": "assets/voice/10f8f5ab4c259c4a.mp3",
+      "durationMs": 1488,
+      "spokenText": "想抬头看看你。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "读了好久，眼睛酸酸的。": {
+      "file": "assets/voice/d33163899210679b.mp3",
+      "durationMs": 3048,
+      "spokenText": "读了好久，眼睛酸酸的。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "等会儿再和下一页较劲。": {
+      "file": "assets/voice/0339e6a216d19cb8.mp3",
+      "durationMs": 1800,
+      "spokenText": "等会儿再和下一页较劲。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "知识好像有点装满了……": {
+      "file": "assets/voice/fa6c97721c1a3143.mp3",
+      "durationMs": 2184,
+      "spokenText": "知识好像有点装满了。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "让我挪一挪位置。": {
+      "file": "assets/voice/865acbe1e33adada.mp3",
+      "durationMs": 2040,
+      "spokenText": "让我挪一挪位置。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "唔，字都快变成小蚂蚁了。": {
+      "file": "assets/voice/a5d562262a0041be.mp3",
+      "durationMs": 4056,
+      "spokenText": "唔，字都快变成小蚂蚁了。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "摸摸头的话，也许还能再精神一点。": {
+      "file": "assets/voice/738ab0fcb0b8fba2.mp3",
+      "durationMs": 3960,
+      "spokenText": "摸摸头的话，也许还能再精神一点。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "这一页先别跑。": {
+      "file": "assets/voice/14cdd1954c31b53e.mp3",
+      "durationMs": 1272,
+      "spokenText": "这一页先别跑。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我去讨一个小小的摸摸头。": {
+      "file": "assets/voice/8815dd1935a211bd.mp3",
+      "durationMs": 3384,
+      "spokenText": "我去讨一个小小的摸摸头。",
+      "mood": "study_tired",
+      "direction": "请用困困的、软绵绵的撒娇语气说话，带一点委屈，轻声讨摸摸头。",
+      "recipeSha256": "28a036658b9a5fb49659254fea74bdc4c969efe886344002f4d809a408887b14",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "白米饭！(๑´ڡ`๑)": {
+      "file": "assets/voice/cc37d41c75f909f1.mp3",
+      "durationMs": 1296,
+      "spokenText": "白米饭！",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "一口……再一口……": {
+      "file": "assets/voice/7188bbb1431f6f83.mp3",
+      "durationMs": 1800,
+      "spokenText": "一口，再一口。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "饭香先跑过来了。": {
+      "file": "assets/voice/7b96d712d9a33286.mp3",
+      "durationMs": 1608,
+      "spokenText": "饭香先跑过来了。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "我有小口吃，真的。": {
+      "file": "assets/voice/048670d09a4b9091.mp3",
+      "durationMs": 2016,
+      "spokenText": "我有小口吃，真的。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "啊呜，接住这一勺。": {
+      "file": "assets/voice/d6dfa67ab219bc8a.mp3",
+      "durationMs": 1896,
+      "spokenText": "啊呜，接住这一勺。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "唔……香香的。": {
+      "file": "assets/voice/883f8be7e4057fc5.mp3",
+      "durationMs": 1608,
+      "spokenText": "唔，香香的。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "饭粒不许逃走——": {
+      "file": "assets/voice/b9eacbb6c514e9b8.mp3",
+      "durationMs": 1536,
+      "spokenText": "饭粒不许逃走。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "乖乖到勺子上来。": {
+      "file": "assets/voice/afa2056d2be58132.mp3",
+      "durationMs": 1584,
+      "spokenText": "乖乖到勺子上来。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "嘴巴正在忙碌中。": {
+      "file": "assets/voice/a733b7069b50e5ad.mp3",
+      "durationMs": 1656,
+      "spokenText": "嘴巴正在忙碌中。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "夸奖的话，等嚼完再说。": {
+      "file": "assets/voice/0da9264565184812.mp3",
+      "durationMs": 2304,
+      "spokenText": "夸奖的话，等嚼完再说。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "这碗饭看起来就很好吃。": {
+      "file": "assets/voice/24a5e839ea340afa.mp3",
+      "durationMs": 2400,
+      "spokenText": "这碗饭看起来就很好吃。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "嘿嘿，猜对了。": {
+      "file": "assets/voice/d1f0bb0b4740d0b4.mp3",
+      "durationMs": 1464,
+      "spokenText": "嘿嘿，猜对了。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "小鲸鱼开始补充饭量。": {
+      "file": "assets/voice/f1f56d375ae6d321.mp3",
+      "durationMs": 2088,
+      "spokenText": "小鲸鱼开始补充饭量。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "啊，不是容量，是饭量。": {
+      "file": "assets/voice/0d7be2d8afb418b0.mp3",
+      "durationMs": 2520,
+      "spokenText": "啊，不是容量，是饭量。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "先吹一小口气。": {
+      "file": "assets/voice/01b133d6d81a97f3.mp3",
+      "durationMs": 1656,
+      "spokenText": "先吹一小口气。",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    },
+    "再啊呜一下 (´ڡ`)": {
+      "file": "assets/voice/6d1e91acddda6eae.mp3",
+      "durationMs": 1296,
+      "spokenText": "再啊呜一下",
+      "mood": "feeding",
+      "direction": "请用开心、期待、甜甜的语气说话，像吃到喜欢的饭菜，俏皮又满足。",
+      "recipeSha256": "e9c4e6a6c1afeaac00b0816744a2eef9dcf0b0100d8617ba6204df6da5f96c6d",
+      "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+    }
+  },
+  "directionRevision": "soft-affection-v2",
+  "mode": "instruct2",
+  "mastering": {
+    "revision": "youthful-v3",
+    "pitchSemitones": 2.6,
+    "formantSemitones": 1.2,
+    "tempo": 1.03
+  },
+  "masteringSha256": "fa409ff874e015369cf1fc187d76b37e6754134ba080e53a605bdf6482d82f64"
+}
